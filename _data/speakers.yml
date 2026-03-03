@@ -1,0 +1,11 @@
+- id: jane-doe
+  name: "Dr. Jane Doe"
+  affiliation: "University of Example"
+  role: "Event Chair"
+  photo: "/assets/images/speakers/jane-doe.jpg"
+
+- id: john-smith
+  name: "Prof. John Smith"
+  affiliation: "Institute of Technology"
+  role: "Keynote Speaker"
+  photo: "/assets/images/speakers/john-smith.jpg"

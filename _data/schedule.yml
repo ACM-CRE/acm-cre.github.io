@@ -1,0 +1,48 @@
+- time: "09:00"
+  end_time: "09:30"
+  title: "Registration & Welcome Coffee"
+  type: break
+
+- time: "09:30"
+  end_time: "10:00"
+  title: "Opening Ceremony"
+  type: ceremony
+  speaker: jane-doe
+
+- time: "10:00"
+  end_time: "11:00"
+  title: "Keynote: The Future of Computing Education"
+  type: keynote
+  speaker: john-smith
+
+- time: "11:00"
+  end_time: "12:30"
+  title: "Discussion Forum: Bridging Research and Practice"
+  type: discussion
+
+- time: "12:30"
+  end_time: "13:30"
+  title: "Lunch Break"
+  type: break
+
+- time: "13:30"
+  end_time: "15:00"
+  title: "Educator Workshop"
+  type: workshop
+  description: "Interactive session for computing educators"
+
+- time: "15:00"
+  end_time: "15:30"
+  title: "Coffee Break"
+  type: break
+
+- time: "15:30"
+  end_time: "17:00"
+  title: "Researcher Workshop"
+  type: workshop
+  description: "Collaborative session for computing researchers"
+
+- time: "17:00"
+  end_time: "17:30"
+  title: "Closing Ceremony"
+  type: ceremony

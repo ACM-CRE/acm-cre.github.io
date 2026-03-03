@@ -1,0 +1,18 @@
+tiers:
+  - name: Platinum
+    sponsors:
+      - name: "TechCorp"
+        logo: "/assets/images/sponsors/techcorp.png"
+        url: "https://example.com/techcorp"
+
+  - name: Gold
+    sponsors:
+      - name: "DataCo"
+        logo: "/assets/images/sponsors/dataco.png"
+        url: "https://example.com/dataco"
+
+  - name: Community
+    sponsors:
+      - name: "Local ACM Chapter"
+        logo: "/assets/images/sponsors/acm-local.png"
+        url: "https://example.com/acm-local"
