@@ -47,9 +47,11 @@ spread_the_word:
   copied: "कॉपी हो गया!"
 
 footer:
-  copyright: "© 2026 ACM COMPUTE क्षेत्रीय कार्यक्रम। सर्वाधिकार सुरक्षित।"
-  powered_by: "Jekyll और GitHub Pages द्वारा संचालित"
-  license: "MIT लाइसेंस"
+  copyright: "© 2026 ACM COMPUTE क्षेत्रीय कार्यक्रम"
+  quick_links: "त्वरित लिंक"
+  more: "अधिक"
+  connect: "संपर्क"
+  organized_by: "आयोजक"
 
 language_switcher:
   label: "भाषा"

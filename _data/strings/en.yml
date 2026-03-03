@@ -47,9 +47,11 @@ spread_the_word:
   copied: "Copied!"
 
 footer:
-  copyright: "© 2026 ACM COMPUTE Regional Events. All rights reserved."
-  powered_by: "Powered by Jekyll & GitHub Pages"
-  license: "MIT License"
+  copyright: "© 2026 ACM COMPUTE Regional Events"
+  quick_links: "Quick Links"
+  more: "More"
+  connect: "Connect"
+  organized_by: "Organized by"
 
 language_switcher:
   label: "Language"
