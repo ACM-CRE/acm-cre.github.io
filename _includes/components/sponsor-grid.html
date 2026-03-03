@@ -1,0 +1,21 @@
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign strings = site.data.strings[lang] %}
+
+{% for tier in site.data.sponsors.tiers %}
+  <div class="sponsor-tier">
+    <h3>{{ tier.name }}</h3>
+    <div class="row justify-content-center align-items-center g-4">
+      {% for sponsor in tier.sponsors %}
+        <div class="col-6 col-md-4 col-lg-3 text-center">
+          <a href="{{ sponsor.url }}" target="_blank" rel="noopener noreferrer" title="{{ sponsor.name }}">
+            {% if sponsor.logo %}
+              <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.name }}" class="sponsor-logo img-fluid" loading="lazy">
+            {% else %}
+              <span class="sponsor-placeholder">{{ sponsor.name }}</span>
+            {% endif %}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}

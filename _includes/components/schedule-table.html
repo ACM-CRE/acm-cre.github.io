@@ -1,0 +1,37 @@
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign strings = site.data.strings[lang] %}
+
+<div class="table-responsive">
+  <table class="table schedule-table">
+    <thead>
+      <tr>
+        <th scope="col">{{ strings.schedule.time_column }}</th>
+        <th scope="col">{{ strings.schedule.session_column }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for session in site.data.schedule %}
+        <tr>
+          <td class="session-time">
+            {{ session.time }}{% if session.end_time %} – {{ session.end_time }}{% endif %}
+          </td>
+          <td>
+            <span class="session-type session-type--{{ session.type }}">
+              {{ session.type }}
+            </span>
+            <strong class="d-block mt-1">{{ session.title }}</strong>
+            {% if session.description %}
+              <small class="text-muted">{{ session.description }}</small>
+            {% endif %}
+            {% if session.speaker %}
+              {% assign speaker = site.data.speakers | where: "id", session.speaker | first %}
+              {% if speaker %}
+                <small class="d-block text-muted">{{ speaker.name }}, {{ speaker.affiliation }}</small>
+              {% endif %}
+            {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

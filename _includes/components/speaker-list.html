@@ -1,0 +1,23 @@
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign strings = site.data.strings[lang] %}
+
+<div class="row g-4">
+  {% for speaker in site.data.speakers %}
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="speaker-card">
+        {% if speaker.photo %}
+          <img src="{{ speaker.photo | relative_url }}" alt="{{ speaker.name }}" class="speaker-photo" loading="lazy">
+        {% else %}
+          <div class="speaker-placeholder bg-secondary text-white">
+            <span class="fs-1">{{ speaker.name | slice: 0 }}</span>
+          </div>
+        {% endif %}
+        <h3 class="speaker-name h6">{{ speaker.name }}</h3>
+        <p class="speaker-affiliation mb-1">{{ speaker.affiliation }}</p>
+        {% if speaker.role %}
+          <p class="speaker-role mb-0">{{ speaker.role }}</p>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
