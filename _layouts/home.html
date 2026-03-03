@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign strings = site.data.strings[lang] %}
+
+<section class="hero" {% if site.data.site.hero_image %}style="background-image: url('{{ site.data.site.hero_image | relative_url }}');"{% endif %}>
+  <div class="container text-center">
+    <h1>{{ site.data.site.event_name }}</h1>
+    <p class="lead">{{ site.data.site.tagline }}</p>
+    <p class="event-date">{{ site.data.site.date_display }}</p>
+    <p class="event-location mb-4">{{ site.data.site.location.name }}</p>
+    <a href="{{ '/register/' | relative_url }}" class="btn btn-light btn-lg">
+      {{ strings.home.register_cta }}
+    </a>
+  </div>
+</section>
+
+{{ content }}

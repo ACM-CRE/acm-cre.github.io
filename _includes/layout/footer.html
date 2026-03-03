@@ -1,0 +1,46 @@
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+{% assign strings = site.data.strings[lang] %}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5>{{ site.data.site.event_name }}</h5>
+        <p>{{ site.data.site.tagline }}</p>
+      </div>
+
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5>{{ strings.venue.heading }}</h5>
+        <p>
+          {{ site.data.site.location.name }}<br>
+          {{ site.data.site.location.address }}
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Contact</h5>
+        <ul class="list-unstyled">
+          {% if site.data.site.social.email %}
+            <li>
+              <a href="mailto:{{ site.data.site.social.email }}">
+                {{ site.data.site.social.email }}
+              </a>
+            </li>
+          {% endif %}
+          {% if site.data.site.social.twitter %}
+            <li>
+              <a href="{{ site.data.site.social.twitter }}" target="_blank" rel="noopener noreferrer">
+                Twitter <span class="visually-hidden">{{ strings.a11y.opens_new_window }}</span>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-copyright text-center">
+      <p class="mb-1">{{ strings.footer.copyright }}</p>
+      <p class="small mb-0">{{ strings.footer.powered_by }}</p>
+    </div>
+  </div>
+</footer>
