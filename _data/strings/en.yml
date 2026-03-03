@@ -1,0 +1,61 @@
+site:
+  title: "ACM COMPUTE Regional"
+
+nav:
+  home: "Home"
+  schedule: "Schedule"
+  speakers: "Speakers"
+  venue: "Venue"
+  register: "Register"
+  sponsors: "Sponsors"
+  spread_the_word: "Spread the Word"
+  skip_to_content: "Skip to main content"
+
+home:
+  register_cta: "Register Now"
+
+schedule:
+  heading: "Schedule"
+  time_column: "Time"
+  session_column: "Session"
+
+speakers:
+  heading: "Speakers"
+
+venue:
+  heading: "Venue"
+  directions: "Getting There"
+
+register:
+  heading: "Register"
+  embed_fallback: "Registration form loading..."
+  instructions: "You can also register by visiting"
+
+sponsors:
+  heading: "Our Sponsors"
+
+spread_the_word:
+  heading: "Spread the Word"
+  flyer_section: "Download Flyers"
+  email_section: "Email Template"
+  email_subject: "Email Subject"
+  email_body: "Email Body"
+  social_section: "Social Media"
+  twitter_post: "Twitter/X Post"
+  linkedin_post: "LinkedIn Post"
+  copy_button: "Copy"
+  copied: "Copied!"
+
+footer:
+  copyright: "© 2026 ACM COMPUTE Regional Events. All rights reserved."
+  powered_by: "Powered by Jekyll & GitHub Pages"
+  license: "MIT License"
+
+language_switcher:
+  label: "Language"
+  en: "English"
+  hi: "हिन्दी"
+
+a11y:
+  opens_new_window: "(opens in new window)"
+  external_link: "(external link)"

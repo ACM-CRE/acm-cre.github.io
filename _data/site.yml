@@ -1,0 +1,18 @@
+event_name: "ACM COMPUTE Regional 2026"
+tagline: "Connecting Educators & Researchers in Computing"
+date: "2026-03-21"
+date_display: "March 21, 2026"
+time: "9:00 AM - 5:00 PM"
+
+location:
+  name: "University Conference Center"
+  address: "123 Campus Drive, City, Country"
+  map_embed_url: "https://www.google.com/maps/embed?pb=YOUR_EMBED_URL"
+
+social:
+  twitter: "https://twitter.com/"
+  email: "contact@example.org"
+
+logo: "/assets/images/logo.png"
+hero_image: "/assets/images/hero.jpg"
+registration_form_url: "https://tally.so/r/your-form-id"

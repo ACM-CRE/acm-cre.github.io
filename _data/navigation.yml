@@ -1,0 +1,14 @@
+- key: home
+  url: /
+- key: schedule
+  url: /schedule/
+- key: speakers
+  url: /speakers/
+- key: venue
+  url: /venue/
+- key: register
+  url: /register/
+- key: sponsors
+  url: /sponsors/
+- key: spread_the_word
+  url: /spread-the-word/
