@@ -1,0 +1,47 @@
+title: "ACM COMPUTE Regional"
+description: "Regional event for computing educators and researchers"
+url: "" # Set to your GitHub Pages URL
+baseurl: "" # Set to repo name if using project site (e.g., "/acm-cre")
+
+lang: en
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Sass settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/images/og-default.png
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - dev-docs/
