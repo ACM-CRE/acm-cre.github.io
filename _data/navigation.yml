@@ -1,7 +1,7 @@
 - key: schedule
   url: /schedule/
-- key: speakers
-  url: /speakers/
+- key: people
+  url: /people/
 - key: venue
   url: /venue/
 - key: sponsors

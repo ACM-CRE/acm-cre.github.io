@@ -4,7 +4,7 @@ site:
 nav:
   home: "होम"
   schedule: "कार्यक्रम"
-  speakers: "वक्ता"
+  people: "लोग"
   venue: "स्थान"
   register: "पंजीकरण"
   sponsors: "प्रायोजक"
@@ -24,8 +24,11 @@ schedule:
   time_column: "समय"
   session_column: "सत्र"
 
-speakers:
-  heading: "वक्ता"
+people:
+  heading: "लोग"
+  keynote: "मुख्य वक्ता"
+  facilitators: "कार्यशाला संचालक"
+  organisers: "आयोजन समिति"
 
 venue:
   heading: "स्थान"

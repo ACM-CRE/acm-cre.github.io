@@ -1,23 +1,71 @@
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
 
-<div class="row g-4">
-  {% for speaker in site.data.speakers %}
-    <div class="col-6 col-md-4 col-lg-3">
-      <div class="speaker-card">
-        {% if speaker.photo %}
-          <img src="{{ speaker.photo | relative_url }}" alt="{{ speaker.name }}" class="speaker-photo" loading="lazy">
-        {% else %}
-          <div class="speaker-placeholder bg-secondary text-white">
-            <span class="fs-1">{{ speaker.name | slice: 0 }}</span>
-          </div>
-        {% endif %}
-        <h3 class="speaker-name h6">{{ speaker.name }}</h3>
-        <p class="speaker-affiliation mb-1">{{ speaker.affiliation }}</p>
-        {% if speaker.role %}
-          <p class="speaker-role mb-0">{{ speaker.role }}</p>
-        {% endif %}
+{% if site.data.speakers.keynote.size > 0 %}
+<section class="mb-5">
+  <h2 class="h4 mb-4">{{ strings.people.keynote }}</h2>
+  <div class="row g-4">
+    {% for speaker in site.data.speakers.keynote %}
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="speaker-card">
+          {% if speaker.photo %}
+            <img src="{{ speaker.photo | relative_url }}" alt="{{ speaker.name }}" class="speaker-photo" loading="lazy">
+          {% else %}
+            <div class="speaker-placeholder">
+              <span class="fs-1 text-muted">{{ speaker.name | slice: 0 }}</span>
+            </div>
+          {% endif %}
+          <h3 class="speaker-name h6">{{ speaker.name }}</h3>
+          <p class="speaker-affiliation mb-0">{{ speaker.affiliation }}</p>
+        </div>
       </div>
-    </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if site.data.speakers.facilitators.size > 0 %}
+<section class="mb-5">
+  <h2 class="h4 mb-4">{{ strings.people.facilitators }}</h2>
+  <div class="row g-4">
+    {% for speaker in site.data.speakers.facilitators %}
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="speaker-card">
+          {% if speaker.photo %}
+            <img src="{{ speaker.photo | relative_url }}" alt="{{ speaker.name }}" class="speaker-photo" loading="lazy">
+          {% else %}
+            <div class="speaker-placeholder">
+              <span class="fs-1 text-muted">{{ speaker.name | slice: 0 }}</span>
+            </div>
+          {% endif %}
+          <h3 class="speaker-name h6">{{ speaker.name }}</h3>
+          <p class="speaker-affiliation mb-0">{{ speaker.affiliation }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if site.data.speakers.organisers.size > 0 %}
+<section class="mb-5">
+  <h2 class="h4 mb-4">{{ strings.people.organisers }}</h2>
+  <div class="row g-4">
+    {% for speaker in site.data.speakers.organisers %}
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="speaker-card">
+          {% if speaker.photo %}
+            <img src="{{ speaker.photo | relative_url }}" alt="{{ speaker.name }}" class="speaker-photo" loading="lazy">
+          {% else %}
+            <div class="speaker-placeholder">
+              <span class="fs-1 text-muted">{{ speaker.name | slice: 0 }}</span>
+            </div>
+          {% endif %}
+          <h3 class="speaker-name h6">{{ speaker.name }}</h3>
+          <p class="speaker-affiliation mb-0">{{ speaker.affiliation }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

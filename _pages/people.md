@@ -1,8 +1,9 @@
 ---
-title: Speakers
+title: People
 lang: en
+permalink: /people/
 alternate:
-  hi: /hi/speakers/
+  hi: /hi/people/
 ---
 
 <div class="container py-5">
@@ -10,9 +11,7 @@ alternate:
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
 
-<h1>{{ strings.speakers.heading }}</h1>
-
-<p class="lead mb-4">Meet our speakers and workshop facilitators.</p>
+<h1 class="mb-4">{{ strings.people.heading }}</h1>
 
 {% include components/speaker-list.html %}
 

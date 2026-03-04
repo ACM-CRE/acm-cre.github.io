@@ -4,7 +4,7 @@ site:
 nav:
   home: "Home"
   schedule: "Schedule"
-  speakers: "Speakers"
+  people: "People"
   venue: "Venue"
   register: "Register"
   sponsors: "Sponsors"
@@ -24,8 +24,11 @@ schedule:
   time_column: "Time"
   session_column: "Session"
 
-speakers:
-  heading: "Speakers"
+people:
+  heading: "People"
+  keynote: "Keynote Speaker"
+  facilitators: "Workshop Facilitators"
+  organisers: "Organising Committee"
 
 venue:
   heading: "Venue"
