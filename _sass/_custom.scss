@@ -54,11 +54,13 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
   background-color: $color-accent;
   border-color: $color-accent;
+  color: #fff;
 
   &:hover,
   &:focus {
     background-color: $color-accent-hover;
     border-color: $color-accent-hover;
+    color: #fff;
   }
 }
 
@@ -92,6 +94,9 @@ h1, h2, h3, h4, h5, h6 {
 // =============================================================================
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: $color-bg;
   border-bottom: 1px solid $color-border;
 }
@@ -100,10 +105,50 @@ h1, h2, h3, h4, h5, h6 {
   padding: $space-sm 0;
 }
 
+.navbar-brand-group {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+
+  .navbar-logos {
+    margin-right: -0.9rem;
+  }
+}
+
+.navbar-logos {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+
+  a {
+    display: block;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  img {
+    height: 36px;
+    width: auto;
+  }
+}
+
+.navbar-divider {
+  width: 1px;
+  height: 20px;
+  background-color: $color-border;
+}
+
 .navbar-brand {
   font-weight: 600;
   font-size: 1.125rem;
   color: $color-text;
+  margin: 0;
+  padding: 0;
 
   &:hover,
   &:focus {
@@ -135,6 +180,10 @@ h1, h2, h3, h4, h5, h6 {
       background: $color-accent;
     }
   }
+}
+
+.navbar-cta {
+  margin-left: $space-sm;
 }
 
 // =============================================================================
@@ -177,6 +226,30 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
   }
 
+  .hero-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-md;
+    margin-bottom: $space-md;
+
+    a {
+      display: block;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+
   .hero-title {
     font-size: 3rem;
     font-weight: 600;
@@ -185,15 +258,15 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.15;
   }
 
-  .hero-tagline {
-    font-size: 1rem;
-    color: $color-text-muted;
-    max-width: 45ch;
-    margin: 0 auto $space-sm;
+  .hero-date {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: $color-text;
+    margin-bottom: $space-xs;
   }
 
-  .hero-meta {
-    font-size: 0.875rem;
+  .hero-location {
+    font-size: 1rem;
     color: $color-text-muted;
     margin-bottom: $space-md;
   }
@@ -441,14 +514,43 @@ section {
   margin-top: $space-xl;
 }
 
-.footer-content {
+.footer-organisers {
+  text-align: center;
+  margin-bottom: $space-md;
+}
+
+.footer-organisers-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: $space-md;
+
+  a {
+    display: block;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  img {
+    height: 32px;
+    width: auto;
+  }
+}
+
+.footer-main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: $space-sm;
-  padding-bottom: $space-md;
-  border-bottom: 1px solid $color-border;
+  padding: $space-md 0;
+  border-top: 1px solid $color-border;
 }
 
 .footer-brand {
@@ -464,20 +566,14 @@ section {
   color: $color-text;
 }
 
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $space-sm;
+.footer-contact {
+  font-size: 0.875rem;
+  color: $color-text-muted;
+  text-decoration: none;
 
-  a {
-    color: $color-text-muted;
-    font-size: 0.875rem;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      color: $color-accent;
-    }
+  &:hover,
+  &:focus {
+    color: $color-accent;
   }
 }
 
@@ -487,33 +583,58 @@ section {
   justify-content: space-between;
   align-items: center;
   gap: $space-xs;
-  padding-top: $space-md;
 }
 
-.footer-copyright,
-.footer-attribution {
+.footer-copyright {
   font-size: 0.75rem;
   color: $color-text-subtle;
   margin: 0;
+}
+
+.footer-attribution {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  font-size: 0.725rem;
+  color: $color-text-subtle;
 
   a {
     color: $color-text-subtle;
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-underline-offset: 2px;
+    text-decoration: none;
+    transition: color 0.2s;
 
     &:hover,
     &:focus {
       color: $color-text-muted;
     }
   }
+
+  .footer-github-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-github-icon {
+    width: 12px;
+    height: 12px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 @media (max-width: 767px) {
-  .footer-content,
+  .footer-main,
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+  }
+
+  .footer-attribution {
+    justify-content: center;
   }
 }
 
@@ -558,6 +679,17 @@ section {
   .dropdown-toggle {
     font-size: 0.875rem;
     color: $color-text-muted;
+    background-color: transparent;
+    border-color: $color-border;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.show {
+      color: $color-text;
+      background-color: $color-bg-subtle;
+      border-color: $color-border;
+    }
   }
 }
 
