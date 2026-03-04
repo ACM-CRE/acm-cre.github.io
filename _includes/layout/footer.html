@@ -1,33 +1,43 @@
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
-{% assign lang_prefix = "" %}
-{% if lang != "en" %}
-  {% assign lang_prefix = "/" | append: lang %}
-{% endif %}
 
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-content">
+    <div class="footer-organisers">
+      <div class="footer-organisers-logos">
+        <a href="https://ashoka.edu.in" target="_blank" rel="noopener" title="Ashoka University">
+          <img src="{{ '/assets/images/organisers/logo-ashoka.svg' | relative_url }}" alt="Ashoka University" loading="lazy">
+        </a>
+        <a href="https://isigcse.acm.org" target="_blank" rel="noopener" title="ACM iSIGCSE">
+          <img src="{{ '/assets/images/organisers/acm-isigcse-768x256.jpg' | relative_url }}" alt="ACM iSIGCSE" loading="lazy">
+        </a>
+        <a href="https://india.acm.org" target="_blank" rel="noopener" title="ACM India Council">
+          <img src="{{ '/assets/images/organisers/acm-india-council.svg' | relative_url }}" alt="ACM India Council" loading="lazy">
+        </a>
+        <a href="https://sigcse.org" target="_blank" rel="noopener" title="ACM SIGCSE">
+          <img src="{{ '/assets/images/organisers/acm-sigcse.png' | relative_url }}" alt="ACM SIGCSE" loading="lazy">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-main">
       <div class="footer-brand">
         <span class="footer-logo">ACM CRE</span>
         <span class="footer-divider">·</span>
-        <span class="footer-tagline">{{ site.data.site.date_display }}</span>
+        <span class="footer-date">{{ strings.home.date_display }}</span>
       </div>
 
-      <nav class="footer-nav">
-        <a href="{{ lang_prefix | append: '/schedule/' | relative_url }}">{{ strings.nav.schedule }}</a>
-        <a href="{{ lang_prefix | append: '/speakers/' | relative_url }}">{{ strings.nav.speakers }}</a>
-        <a href="{{ lang_prefix | append: '/venue/' | relative_url }}">{{ strings.nav.venue }}</a>
-        <a href="{{ lang_prefix | append: '/register/' | relative_url }}">{{ strings.nav.register }}</a>
-        <a href="mailto:{{ site.data.site.social.email }}">Contact</a>
-      </nav>
+      <a href="mailto:{{ site.data.site.social.email }}" class="footer-contact">{{ strings.footer.contact }}</a>
     </div>
 
     <div class="footer-bottom">
       <p class="footer-copyright">{{ strings.footer.copyright }}</p>
-      <p class="footer-attribution">
-        <a href="https://deeprajpandey.com/" target="_blank" rel="noopener">dp</a> | <a href="https://github.com/ACM-CRE/acm-cre.github.io" target="_blank" rel="noopener">GitHub</a>
-      </p>
+      <div class="footer-attribution">
+        <a href="https://deeprajpandey.com/" target="_blank" rel="noopener">{{ strings.footer.built_by }}</a>
+        <a href="https://github.com/acm-cre/acm-cre.github.io" target="_blank" rel="noopener" title="View source on GitHub" class="footer-github-link">
+          <img src="{{ '/assets/images/social/github.svg' | relative_url }}" alt="GitHub" class="footer-github-icon">
+        </a>
+      </div>
     </div>
   </div>
 </footer>
