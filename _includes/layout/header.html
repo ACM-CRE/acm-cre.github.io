@@ -8,20 +8,14 @@
 <header class="site-header">
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <div class="navbar-brand-group">
+      <a class="navbar-brand-group" href="{{ lang_prefix | append: '/' | relative_url }}">
         <div class="navbar-logos">
-          <a href="https://ashoka.edu.in" target="_blank" rel="noopener">
-            <img src="{{ '/assets/images/organisers/logo-ashoka.svg' | relative_url }}" alt="Ashoka University">
-          </a>
-          <a href="https://isigcse.acm.org" target="_blank" rel="noopener">
-            <img src="{{ '/assets/images/organisers/acm-isigcse-768x256.jpg' | relative_url }}" alt="ACM iSIGCSE">
-          </a>
+          <img src="{{ '/assets/images/organisers/logo-ashoka.svg' | relative_url }}" alt="Ashoka University">
+          <img src="{{ '/assets/images/organisers/acm-isigcse-768x256.jpg' | relative_url }}" alt="ACM iSIGCSE">
         </div>
         <span class="navbar-divider"></span>
-        <a class="navbar-brand" href="{{ lang_prefix | append: '/' | relative_url }}">
-          CRE
-        </a>
-      </div>
+        <span class="navbar-brand">CRE</span>
+      </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

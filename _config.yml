@@ -1,7 +1,7 @@
 title: "ACM COMPUTE Regional"
 description: "Regional event for computing educators and researchers"
-url: "" # Set to your GitHub Pages URL
-baseurl: "" # Set to repo name if using project site (e.g., "/acm-cre")
+url: "https://acm-cre.github.io"
+baseurl: ""
 
 lang: en
 

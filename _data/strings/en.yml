@@ -45,6 +45,9 @@ sponsors:
 spread_the_word:
   heading: "Spread the Word"
   flyer_section: "Download Flyers"
+  download_en: "Download English Flyer"
+  download_hi: "Download Hindi Flyer"
+  view_browser: "View in browser"
   email_section: "Email Template"
   email_subject: "Email Subject"
   email_body: "Email Body"

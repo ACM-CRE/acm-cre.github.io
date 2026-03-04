@@ -17,10 +17,27 @@ alternate:
 <!-- Flyers Section -->
 <div class="share-section">
   <h3>{{ strings.spread_the_word.flyer_section }}</h3>
-  <p>अपने नेटवर्क के साथ साझा करने के लिए हमारा इवेंट फ्लायर डाउनलोड करें:</p>
-  <a href="{{ '/assets/downloads/flyer.pdf' | relative_url }}" class="btn btn-outline-primary" download>
-    फ्लायर डाउनलोड करें (PDF)
-  </a>
+  <p>अपने नेटवर्क के साथ साझा करने के लिए हमारे इवेंट फ्लायर डाउनलोड करें:</p>
+  <div class="flyer-cards">
+    <div class="flyer-card">
+      <div class="flyer-card-preview">
+        <img src="{{ '/assets/images/flyers/preview-en.png' | relative_url }}" alt="English flyer preview">
+      </div>
+      <a href="{{ '/assets/downloads/flyer-en.pdf' | relative_url }}" class="btn btn-outline-primary" download>
+        Download English (PDF)
+      </a>
+      <a href="{{ '/flyer/' | relative_url }}" class="flyer-card-link">{{ strings.spread_the_word.view_browser }}</a>
+    </div>
+    <div class="flyer-card">
+      <div class="flyer-card-preview">
+        <img src="{{ '/assets/images/flyers/preview-hi.png' | relative_url }}" alt="Hindi flyer preview">
+      </div>
+      <a href="{{ '/assets/downloads/flyer-hi.pdf' | relative_url }}" class="btn btn-outline-primary" download>
+        Download हिंदी (PDF)
+      </a>
+      <a href="{{ '/hi/flyer/' | relative_url }}" class="flyer-card-link">{{ strings.spread_the_word.view_browser }}</a>
+    </div>
+  </div>
 </div>
 
 <!-- Email Template Section -->
@@ -29,7 +46,7 @@ alternate:
 
   <h4 class="h6">{{ strings.spread_the_word.email_subject }}</h4>
   <div class="position-relative">
-    <pre id="email-subject">{{ site.data.site.date_display }} को {{ site.data.site.event_name }} में शामिल हों</pre>
+    <pre id="email-subject">निमंत्रण: {{ site.data.site.event_name }} – मुफ़्त रजिस्ट्रेशन शुरू</pre>
     <button class="btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2"
             data-copy-target="email-subject"
             data-copied-text="{{ strings.spread_the_word.copied }}">
@@ -41,17 +58,17 @@ alternate:
   <div class="position-relative">
     <pre id="email-body">प्रिय साथियों,
 
-मैं आपके साथ एक रोमांचक कार्यक्रम साझा करना चाहता/चाहती हूं: {{ site.data.site.event_name }}
+आपको {{ site.data.site.event_name }} के लिए आमंत्रित करते हुए खुशी हो रही है। यह CS शिक्षकों और रिसर्चर्स के लिए एक दिन का कार्यक्रम है, जिसे अशोका विश्वविद्यालय और ACM India iSIGCSE मिलकर आयोजित कर रहे हैं।
 
-तारीख: {{ site.data.site.date_display }}
+तारीख़: {{ site.data.site.date_display }}
 समय: {{ site.data.site.time }}
-स्थान: {{ site.data.site.location.name }}
+जगह: {{ site.data.site.location.name }}
 
-{{ site.data.site.tagline }}
+कार्यक्रम में मुख्य भाषण, CS शिक्षा पर पैनल चर्चा, हैंड्स-ऑन वर्कशॉप, और साथियों से मिलने का मौक़ा होगा। रजिस्ट्रेशन मुफ़्त है।
 
-अभी पंजीकरण करें: {{ site.url }}{{ site.baseurl }}/hi/register/
+ज़्यादा जानकारी और रजिस्ट्रेशन: {{ site.url }}/register/
 
-आशा है वहां मिलेंगे!</pre>
+[आपका नाम]</pre>
     <button class="btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2"
             data-copy-target="email-body"
             data-copied-text="{{ strings.spread_the_word.copied }}">
@@ -66,16 +83,16 @@ alternate:
 
   <h4 class="h6">{{ strings.spread_the_word.twitter_post }}</h4>
   <div class="position-relative">
-    <pre id="twitter-post">{{ site.data.site.event_name }} के लिए उत्साहित!
+    <pre id="twitter-post">{{ site.data.site.event_name }}
 
 {{ site.data.site.date_display }}
 {{ site.data.site.location.name }}
 
-शिक्षकों और शोधकर्ताओं के लिए मुख्य भाषण, कार्यशालाएं और नेटवर्किंग।
+CS शिक्षकों और रिसर्चर्स के लिए एक दिन: मुख्य भाषण, पैनल चर्चा, वर्कशॉप, और साथियों से मिलने का मौक़ा।
 
-पंजीकरण: {{ site.url }}{{ site.baseurl }}/hi/register/
+मुफ़्त रजिस्ट्रेशन: {{ site.url }}/register/
 
-#ACMCompute #ComputingEducation</pre>
+#CSEducation #ACMIndia</pre>
     <button class="btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2"
             data-copy-target="twitter-post"
             data-copied-text="{{ strings.spread_the_word.copied }}">
@@ -85,21 +102,22 @@ alternate:
 
   <h4 class="h6 mt-3">{{ strings.spread_the_word.linkedin_post }}</h4>
   <div class="position-relative">
-    <pre id="linkedin-post">मैं {{ site.data.site.event_name }} साझा करने के लिए उत्साहित हूं, कंप्यूटिंग शिक्षकों और शोधकर्ताओं को जोड़ने वाला एक क्षेत्रीय कार्यक्रम।
+    <pre id="linkedin-post">{{ site.data.site.event_name }} CS शिक्षकों और रिसर्चर्स के लिए एक दिन का रीजनल कार्यक्रम है।
+
+आयोजक: अशोका विश्वविद्यालय और ACM India iSIGCSE
 
 {{ site.data.site.date_display }}
 {{ site.data.site.location.name }}
 
-कार्यक्रम में शामिल हैं:
-- प्रमुख विशेषज्ञों के मुख्य भाषण
-- इंटरैक्टिव शिक्षक और शोधकर्ता कार्यशालाएं
-- नेटवर्किंग के अवसर
+कार्यक्रम में:
+– मुख्य भाषण
+– CS शिक्षा पर पैनल चर्चा
+– शिक्षकों और रिसर्चर्स के लिए हैंड्स-ऑन वर्कशॉप
+– पूरे क्षेत्र से आए साथियों से मिलने का मौक़ा
 
-यदि आप कंप्यूटिंग शिक्षा या अनुसंधान में शामिल हैं, तो मैं आपको उपस्थित होने के लिए प्रोत्साहित करता/करती हूं!
+रजिस्ट्रेशन मुफ़्त है, अभी रजिस्टर करें: {{ site.url }}/register/
 
-अधिक जानें और पंजीकरण करें: {{ site.url }}{{ site.baseurl }}/hi/register/
-
-#ComputingEducation #ACM #Research #Networking</pre>
+#CSEducation #ACMIndia</pre>
     <button class="btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2"
             data-copy-target="linkedin-post"
             data-copied-text="{{ strings.spread_the_word.copied }}">

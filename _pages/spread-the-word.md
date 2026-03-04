@@ -17,10 +17,27 @@ alternate:
 <!-- Flyers Section -->
 <div class="share-section">
   <h3>{{ strings.spread_the_word.flyer_section }}</h3>
-  <p>Download our event flyer to share with your network:</p>
-  <a href="{{ '/assets/downloads/flyer.pdf' | relative_url }}" class="btn btn-outline-primary" download>
-    Download Flyer (PDF)
-  </a>
+  <p>Download our event flyers to share with your network:</p>
+  <div class="flyer-cards">
+    <div class="flyer-card">
+      <div class="flyer-card-preview">
+        <img src="{{ '/assets/images/flyers/preview-en.png' | relative_url }}" alt="English flyer preview">
+      </div>
+      <a href="{{ '/assets/downloads/flyer-en.pdf' | relative_url }}" class="btn btn-outline-primary" download>
+        Download English (PDF)
+      </a>
+      <a href="{{ '/flyer/' | relative_url }}" class="flyer-card-link">{{ strings.spread_the_word.view_browser }}</a>
+    </div>
+    <div class="flyer-card">
+      <div class="flyer-card-preview">
+        <img src="{{ '/assets/images/flyers/preview-hi.png' | relative_url }}" alt="Hindi flyer preview">
+      </div>
+      <a href="{{ '/assets/downloads/flyer-hi.pdf' | relative_url }}" class="btn btn-outline-primary" download>
+        Download हिंदी (PDF)
+      </a>
+      <a href="{{ '/hi/flyer/' | relative_url }}" class="flyer-card-link">{{ strings.spread_the_word.view_browser }}</a>
+    </div>
+  </div>
 </div>
 
 <!-- Email Template Section -->
@@ -29,7 +46,7 @@ alternate:
 
   <h4 class="h6">{{ strings.spread_the_word.email_subject }}</h4>
   <div class="position-relative">
-    <pre id="email-subject">Join us at {{ site.data.site.event_name }} on {{ site.data.site.date_display }}</pre>
+    <pre id="email-subject">Invitation: {{ site.data.site.event_name }} – Free Registration Open</pre>
     <button class="btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2"
             data-copy-target="email-subject"
             data-copied-text="{{ strings.spread_the_word.copied }}">
@@ -41,17 +58,18 @@ alternate:
   <div class="position-relative">
     <pre id="email-body">Dear colleagues,
 
-I wanted to share an exciting event with you: {{ site.data.site.event_name }}.
+I am writing to invite you to {{ site.data.site.event_name }}, a one-day gathering for CS educators and researchers hosted by Ashoka University and ACM India iSIGCSE.
 
 Date: {{ site.data.site.date_display }}
 Time: {{ site.data.site.time }}
-Location: {{ site.data.site.location.name }}
+Venue: {{ site.data.site.location.name }}
 
-{{ site.data.site.tagline }}
+The day includes a keynote, a panel discussion on CS education, hands-on workshops, and time to connect with peers. Registration is free.
 
-Register now at: {{ site.url }}{{ site.baseurl }}/register/
+Details and registration: {{ site.url }}/register/
 
-I hope to see you there!</pre>
+Best regards,
+[Your name]</pre>
     <button class="btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2"
             data-copy-target="email-body"
             data-copied-text="{{ strings.spread_the_word.copied }}">
@@ -66,16 +84,16 @@ I hope to see you there!</pre>
 
   <h4 class="h6">{{ strings.spread_the_word.twitter_post }}</h4>
   <div class="position-relative">
-    <pre id="twitter-post">Excited for {{ site.data.site.event_name }}!
+    <pre id="twitter-post">{{ site.data.site.event_name }}
 
 {{ site.data.site.date_display }}
 {{ site.data.site.location.name }}
 
-Join educators & researchers for keynotes, workshops, and networking.
+A day for CS educators and researchers: keynote, panel discussion, workshops, and peer connections.
 
-Register: {{ site.url }}{{ site.baseurl }}/register/
+Free registration: {{ site.url }}/register/
 
-#ACMCompute #ComputingEducation</pre>
+#CSEducation #ACMIndia</pre>
     <button class="btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2"
             data-copy-target="twitter-post"
             data-copied-text="{{ strings.spread_the_word.copied }}">
@@ -85,21 +103,22 @@ Register: {{ site.url }}{{ site.baseurl }}/register/
 
   <h4 class="h6 mt-3">{{ strings.spread_the_word.linkedin_post }}</h4>
   <div class="position-relative">
-    <pre id="linkedin-post">I'm excited to share {{ site.data.site.event_name }}, a regional event connecting computing educators and researchers.
+    <pre id="linkedin-post">{{ site.data.site.event_name }} is a one-day regional gathering for CS educators and researchers.
+
+Hosted by Ashoka University and ACM India iSIGCSE.
 
 {{ site.data.site.date_display }}
 {{ site.data.site.location.name }}
 
-The event features:
-- Keynote presentations from leading experts
-- Interactive educator and researcher workshops
-- Networking opportunities
+The programme includes:
+– Keynote talk
+– Panel discussion on CS education
+– Hands-on workshops for educators and researchers
+– Time to connect with peers from across the region
 
-If you're involved in computing education or research, I encourage you to attend!
+Registration is free and open now: {{ site.url }}/register/
 
-Learn more and register: {{ site.url }}{{ site.baseurl }}/register/
-
-#ComputingEducation #ACM #Research #Networking</pre>
+#CSEducation #ACMIndia</pre>
     <button class="btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2"
             data-copy-target="linkedin-post"
             data-copied-text="{{ strings.spread_the_word.copied }}">
