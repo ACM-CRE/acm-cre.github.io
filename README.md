@@ -2,10 +2,15 @@
 
 A Jekyll template for ACM COMPUTE Regional Events. Fork this repository to create your own regional event website.
 
+<p>
+  <img src="assets/images/home_en.png" alt="Homepage (English)" width="49%">
+  <img src="assets/images/home_hi.png" alt="Homepage (Hindi)" width="49%">
+</p>
+
 ## Features
 
 - **Jekyll + GitHub Pages** compatible (no build step required)
-- **Bootstrap 5** with full Sass customization
+- **Bootstrap 5** with full Sass customisation
 - **WCAG 2.1 AA** accessible
 - **Bilingual support** (English + Hindi) with proper i18n architecture
 - **Data-driven** — configure everything via YAML files
@@ -59,8 +64,8 @@ assets/images/
 Edit `_sass/_variables.scss` to change:
 
 ```scss
-// Brand colors
-$primary: #0072BC;    // Change to your brand color
+// Brand colours
+$primary: #0072BC;    // Change to your brand colour
 $secondary: #6c757d;
 
 // Typography
@@ -120,7 +125,7 @@ The script builds the site and pushes to the `gh-pages` branch. Run it whenever 
 │   └── flyer.html        # Print-optimized flyer layout
 ├── _pages/               # English pages
 ├── _sass/
-│   ├── _variables.scss   # Theme customization
+│   ├── _variables.scss   # Theme customisation
 │   ├── _bootstrap.scss   # Bootstrap imports
 │   └── _custom.scss      # Custom styles
 ├── assets/
@@ -134,190 +139,10 @@ The script builds the site and pushes to the `gh-pages` branch. Run it whenever 
 └── robots.txt            # Search engine config
 ```
 
-## Internationalization (i18n)
+## Documentation
 
-The template supports multiple languages using a subdirectory approach.
-
-### Default Language
-
-Set the default language in `_config.yml`:
-
-```yaml
-lang: en  # or 'hi' for Hindi
-```
-
-### How It Works
-
-- English pages: `/`, `/schedule/`, `/people/`, etc.
-- Hindi pages: `/hi/`, `/hi/schedule/`, `/hi/people/`, etc.
-- Each page has `lang` and `alternate` in front matter
-- Navigation automatically uses the current language
-- Language switcher links to equivalent page in other language
-
-### Adding a New Language
-
-1. Create a new strings file:
-   ```
-   _data/strings/ta.yml  # Tamil example
-   ```
-
-2. Copy structure from `en.yml` and translate all strings
-
-3. Create a language subdirectory with all pages:
-   ```
-   ta/
-   ├── index.md
-   ├── schedule.md
-   ├── speakers.md
-   ├── venue.md
-   ├── register.md
-   ├── sponsors.md
-   └── spread-the-word.md
-   ```
-
-4. Each page needs front matter:
-   ```yaml
-   ---
-   title: அட்டவணை
-   lang: ta
-   permalink: /ta/schedule/
-   alternate:
-     en: /schedule/
-     hi: /hi/schedule/
-   ---
-   ```
-
-5. Update existing pages to include the new language in their `alternate` front matter
-
-## Customization Guide
-
-### Changing Colors
-
-Edit `_sass/_variables.scss`:
-
-```scss
-$primary: #your-brand-color;
-```
-
-This will automatically update:
-- Buttons
-- Links
-- Hero overlay
-- Focus states
-- And all Bootstrap components
-
-### Changing Schedule
-
-Edit `_data/schedule.yml`:
-
-```yaml
-- time: "09:00"
-  end_time: "10:00"
-  title: "Your Session Title"
-  type: keynote  # keynote, workshop, break, ceremony, discussion
-  speaker: speaker-id  # Must match id in speakers.yml
-  description: "Optional description"
-```
-
-### Adding Speakers
-
-Edit `_data/speakers.yml`:
-
-```yaml
-- id: unique-id
-  name: "Dr. Name Here"
-  affiliation: "University Name"
-  role: "Keynote Speaker"
-  photo: "/assets/images/speakers/filename.jpg"
-```
-
-### Changing Sponsor Tiers
-
-Edit `_data/sponsors.yml`:
-
-```yaml
-tiers:
-  - name: Platinum
-    sponsors:
-      - name: "Sponsor Name"
-        logo: "/assets/images/sponsors/logo.png"
-        url: "https://sponsor-website.com"
-  - name: Gold
-    sponsors: [...]
-```
-
-### Flyers and Marketing Materials
-
-The template includes a marketing kit for promoting your event:
-
-**Printable Flyer** (`/flyer/`):
-- Print-optimized HTML layout (A4 portrait)
-- Includes event details, QR code, and organizer logos
-- Use your browser's print function to save as PDF
-
-**Spread the Word Page** (`/spread-the-word/`):
-- Downloadable flyer PDFs (bilingual)
-- Email invitation template with copy button
-- Social media post templates (Twitter, LinkedIn)
-
-**Adding Your Flyers**:
-
-1. Create your flyer PDFs and place them in `assets/downloads/`:
-   ```
-   assets/downloads/
-   ├── flyer-en.pdf
-   └── flyer-hi.pdf
-   ```
-
-2. Add preview images in `assets/images/flyers/`:
-   ```
-   assets/images/flyers/
-   ├── flyer-en.png
-   └── flyer-hi.png
-   ```
-
-3. The spread-the-word page will automatically display them with download links.
-
-### Embedding Registration Form
-
-The template supports any embeddable form service. Edit `_data/site.yml`:
-
-```yaml
-registration_form_url: "https://tally.so/r/your-form-id"
-# or
-registration_form_url: "https://docs.google.com/forms/d/e/your-form-id/viewform?embedded=true"
-```
-
-## Accessibility
-
-This template follows WCAG 2.1 AA guidelines:
-
-- Skip-to-content link for keyboard users
-- Semantic HTML5 landmarks (`<header>`, `<main>`, `<footer>`)
-- ARIA labels where needed
-- Sufficient color contrast
-- Focus visible states
-- Keyboard navigable
-- Reduced motion support (`prefers-reduced-motion`)
-- Alt text placeholders for images
-
-## SEO
-
-Built-in SEO features:
-
-- `jekyll-seo-tag` for meta tags and Open Graph
-- `jekyll-sitemap` for automatic sitemap.xml
-- Schema.org Event structured data
-- Customizable per-page meta descriptions
-- Default Open Graph image with per-page override
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome for Android)
+- [Internationalization (i18n)](docs/i18n.md) — adding and managing languages
+- [Customisation Guide](docs/customisation.md) — colours, schedule, speakers, sponsors, flyers
 
 ## License
 

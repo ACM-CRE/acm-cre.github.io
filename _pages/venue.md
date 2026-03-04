@@ -92,7 +92,7 @@ alternate:
         <h2 class="h5 mb-3">Accommodation</h2>
         <p>If you need accommodation, the <strong>{{ site.data.site.accommodation.name }}</strong> at {{ site.data.site.accommodation.location }} is available.</p>
         <p class="mb-0"><strong>Rate:</strong> {{ site.data.site.accommodation.price }}</p>
-        <p class="small text-muted mt-3 mb-0">Contact the organizers for booking assistance.</p>
+        <p class="small text-muted mt-3 mb-0">Contact the organisers for booking assistance.</p>
       </div>
     </div>
   </div>
