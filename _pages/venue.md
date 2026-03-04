@@ -15,7 +15,10 @@ alternate:
 <div class="row mb-5">
   <div class="col-lg-6 mb-4 mb-lg-0">
     <h2 class="h4">{{ site.data.site.location.name }}</h2>
-    <p>{{ site.data.site.location.address }}</p>
+    <p>
+      Trivedi School of Biosciences, North Campus<br>
+      {{ site.data.site.location.address }}
+    </p>
     <p>
       <a href="{{ site.data.site.location.url }}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm me-2">
         Visit University Website
@@ -40,21 +43,19 @@ alternate:
   </div>
 </div>
 
+<div class="alert alert-warning mb-5">
+  <strong>Plan ahead:</strong> The campus is ~60 km north of Central Delhi. Leave early to account for traffic. For day-of assistance, contact <a href="mailto:{{ site.data.site.social.email }}">{{ site.data.site.social.email }}</a>
+</div>
+
 <div class="row mb-5">
   <div class="col-lg-10">
     <h2 class="h4">{{ strings.venue.directions }}</h2>
 
     <div class="card border-0 bg-light mb-4">
       <div class="card-body">
-        <h3 class="h5">Option 1: By Car or Cab</h3>
-        <p class="mb-0">Ashoka University is located in Rajiv Gandhi Education City, approximately 60 km from Delhi. The campus is accessible via NH-44 (formerly NH-1). Expect 1.5–2 hours from central Delhi or IGI Airport depending on traffic.</p>
-      </div>
-    </div>
-
-    <div class="card border-0 bg-light mb-4">
-      <div class="card-body">
-        <h3 class="h5">Option 2: University Shuttle from Azadpur Metro</h3>
+        <h3 class="h5">Option 1: Free University Shuttle from Azadpur Metro</h3>
         <p>Hourly shuttles to the Ashoka campus run from <strong>Azadpur Metro Station Gate 1</strong> starting at <strong>7:30 AM</strong>. Travel time is 40 minutes to 1 hour.</p>
+        <p><strong>Shuttle is free</strong> but requires advance booking. Indicate your preference on the <a href="{{ '/register/' | relative_url }}">registration form</a> and we'll book on your behalf.</p>
 
         <h4 class="h6 mt-3">From Indira Gandhi International Airport</h4>
         <ul>
@@ -63,11 +64,21 @@ alternate:
         </ul>
 
         <h4 class="h6 mt-3">From New Delhi Railway Station</h4>
-        <ul class="mb-0">
+        <ul>
           <li>Exit the station and head to New Delhi Metro Station. Take the Yellow Line (towards Samaypur Badli) directly to Azadpur.</li>
         </ul>
 
-        <p class="small text-muted mt-3 mb-0">University security staff in navy blue uniforms would be near the metro entrance and shuttle boarding point for assistance.</p>
+        <p class="small text-muted mt-3 mb-0">
+          <strong>Tip:</strong> Metro from Rajiv Chowk to Azadpur takes ~30 minutes. University security staff in navy blue uniforms will be available near the metro entrance and shuttle boarding point for assistance.
+        </p>
+      </div>
+    </div>
+
+    <div class="card border-0 bg-light mb-4">
+      <div class="card-body">
+        <h3 class="h5">Option 2: By Car or Cab</h3>
+        <p>The campus is accessible via NH-44 (formerly NH-1). Expect 1.5–2 hours from Central Delhi or IGI Airport depending on traffic.</p>
+        <p class="mb-0"><strong>Parking:</strong> Available on campus for those driving.</p>
       </div>
     </div>
   </div>
