@@ -28,6 +28,8 @@ social:
   ashoka_website: "https://ashoka.edu.in"
   ashoka_twitter: "https://x.com/AshokaUniv"
   ashoka_instagram: "https://www.instagram.com/ashokauniv/"
+  icons:
+    github: "/assets/images/social/github.svg"
 
 sponsors:
   seeking: true
