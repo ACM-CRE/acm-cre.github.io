@@ -724,6 +724,44 @@ section {
   }
 }
 
+.flyer-previews {
+  display: flex;
+  gap: $space-md;
+  margin-bottom: $space-md;
+}
+
+.flyer-preview {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: $color-text;
+  transition: transform 0.2s;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-4px);
+
+    img {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  img {
+    width: 140px;
+    height: auto;
+    border: 1px solid $color-border;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
+  }
+
+  span {
+    display: block;
+    margin-top: $space-xs;
+    font-size: 0.875rem;
+    color: $color-text-muted;
+  }
+}
+
 // =============================================================================
 // Accessibility
 // =============================================================================

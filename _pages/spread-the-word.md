@@ -18,6 +18,16 @@ alternate:
 <div class="share-section">
   <h3>{{ strings.spread_the_word.flyer_section }}</h3>
   <p>Download our event flyers to share with your network:</p>
+  <div class="flyer-previews">
+    <a href="{{ '/flyer/' | relative_url }}" class="flyer-preview">
+      <img src="{{ '/assets/images/flyers/preview-en.png' | relative_url }}" alt="English flyer preview">
+      <span>English</span>
+    </a>
+    <a href="{{ '/hi/flyer/' | relative_url }}" class="flyer-preview">
+      <img src="{{ '/assets/images/flyers/preview-hi.png' | relative_url }}" alt="Hindi flyer preview">
+      <span>हिंदी</span>
+    </a>
+  </div>
   <div class="d-flex flex-wrap gap-3 mb-3">
     <a href="{{ '/assets/downloads/flyer-en.pdf' | relative_url }}" class="btn btn-primary" download>
       {{ strings.spread_the_word.download_en }} (PDF)
@@ -26,11 +36,6 @@ alternate:
       {{ strings.spread_the_word.download_hi }} (PDF)
     </a>
   </div>
-  <p class="small text-muted">
-    {{ strings.spread_the_word.view_browser }}:
-    <a href="{{ '/flyer/' | relative_url }}">English</a> |
-    <a href="{{ '/hi/flyer/' | relative_url }}">हिंदी</a>
-  </p>
 </div>
 
 <!-- Email Template Section -->
