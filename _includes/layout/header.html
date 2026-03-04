@@ -8,9 +8,20 @@
 <header class="site-header">
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="{{ lang_prefix | append: '/' | relative_url }}">
-        ACM CRE
-      </a>
+      <div class="navbar-brand-group">
+        <div class="navbar-logos">
+          <a href="https://ashoka.edu.in" target="_blank" rel="noopener">
+            <img src="{{ '/assets/images/organisers/logo-ashoka.svg' | relative_url }}" alt="Ashoka University">
+          </a>
+          <a href="https://isigcse.acm.org" target="_blank" rel="noopener">
+            <img src="{{ '/assets/images/organisers/acm-isigcse-768x256.jpg' | relative_url }}" alt="ACM iSIGCSE">
+          </a>
+        </div>
+        <span class="navbar-divider"></span>
+        <a class="navbar-brand" href="{{ lang_prefix | append: '/' | relative_url }}">
+          CRE
+        </a>
+      </div>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,6 +41,10 @@
         </ul>
 
         {% include utilities/language-switcher.html %}
+
+        <a href="{{ lang_prefix | append: '/register/' | relative_url }}" class="btn btn-primary btn-sm navbar-cta">
+          {{ strings.nav.register }}
+        </a>
       </div>
     </div>
   </nav>

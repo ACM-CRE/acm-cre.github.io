@@ -9,10 +9,15 @@ nav:
   register: "पंजीकरण"
   sponsors: "प्रायोजक"
   spread_the_word: "प्रचार करें"
+  flyers: "पोस्‍टर"
   skip_to_content: "मुख्य सामग्री पर जाएं"
 
 home:
   register_cta: "अभी पंजीकरण करें"
+  date_display: "शनिवार, 21 मार्च, 2026"
+  date_month: "मार्च"
+  date_day: "21"
+  date_weekday: "शनि"
 
 schedule:
   heading: "कार्यक्रम"
@@ -51,7 +56,9 @@ footer:
   quick_links: "त्वरित लिंक"
   more: "अधिक"
   connect: "संपर्क"
+  contact: "संपर्क करें"
   organized_by: "आयोजक"
+  built_by: "deeprajpandey द्वारा निर्मित"
 
 language_switcher:
   label: "भाषा"

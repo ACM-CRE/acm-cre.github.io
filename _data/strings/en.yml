@@ -9,10 +9,15 @@ nav:
   register: "Register"
   sponsors: "Sponsors"
   spread_the_word: "Spread the Word"
+  flyers: "Flyers"
   skip_to_content: "Skip to main content"
 
 home:
   register_cta: "Register Now"
+  date_display: "Saturday, March 21, 2026"
+  date_month: "MAR"
+  date_day: "21"
+  date_weekday: "SAT"
 
 schedule:
   heading: "Schedule"
@@ -51,7 +56,9 @@ footer:
   quick_links: "Quick Links"
   more: "More"
   connect: "Connect"
+  contact: "Contact"
   organized_by: "Organized by"
+  built_by: "built by deeprajpandey"
 
 language_switcher:
   label: "Language"
