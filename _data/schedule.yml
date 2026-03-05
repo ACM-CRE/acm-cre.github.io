@@ -11,30 +11,30 @@
   description: "Registration, morning tea, and networking"
 
 - time: "10:00"
-  end_time: "11:00"
-  title: "Opening & Keynote"
+  end_time: "10:30"
+  title: "Opening"
   type: keynote
-  description: "Introduction to COMPUTE and regional events, followed by a keynote from a COMPUTE community member on an important topic in CS Education."
+  description: "Introduction to COMPUTE and regional events, and the day's agenda"
 
-- time: "11:00"
-  end_time: "12:00"
+- time: "10:30"
+  end_time: "11:30"
   title: "Discussion Forum"
   type: discussion
   description: "We will pick pertinent topics, collect feedback from attendees, and discuss in groups. The idea is to frame problems and suggest solutions and collaborations that can address them—regionally and nationally. No presentations, only discussions and problem-solving. Every attendee should leave with an idea or problem they can use in the workshop sessions."
-
-- time: "12:00"
-  end_time: "14:00"
+  facilitators:
+    - "Mrityunjay Kumar"
+    - "Prajish Prasad"
+  
+- time: "11:30"
+  end_time: "13:30"
   title: "Educator Workshop"
   type: workshop
   description: "For CS educators who have ideas on creative ways of teaching in their classroom, or have already tried these, and would like to polish it into an experience report. The workshop will help structure the report and answer specific questions. Hands-on, group-based."
   facilitators:
-    - "Mrityunjay Kumar"
     - "Prajish Prasad"
-    - "Manu Awasthi"
-    - "Anirban Sen"
-    - "Aalok Thakkar"
+    - "Mrityunjay Kumar"
 
-- time: "14:00"
+- time: "13:30"
   end_time: "15:00"
   title: "Lunch"
   type: break
@@ -46,12 +46,9 @@
   type: workshop
   description: "For CSEd researchers (current or budding) working on a research paper submission, or have ideas to design a study around. They may be starting from a previously rejected paper, a new study they are engaged in, or just have an idea that needs input. The workshop will help prepare for submission to COMPUTE or similar conferences and journals."
   facilitators:
-    - "Mrityunjay Kumar"
+    - "Shitanshu Mishra"
     - "Prajish Prasad"
-    - "Manu Awasthi"
-    - "Anirban Sen"
-    - "Aalok Thakkar"
-
+  
 - time: "17:30"
   end_time: "18:00"
   title: "Closing"

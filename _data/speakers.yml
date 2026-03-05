@@ -10,7 +10,7 @@ facilitators:
   - id: mrityunjay-kumar
     name: "Mrityunjay Kumar"
     affiliation: "BITS Pilani"
-    # photo: "/assets/images/speakers/mrityunjay-kumar.jpg"
+    # photo: "/assets/images/speakers/mrityunjay-kumar.png"
 
   - id: prajish-prasad
     name: "Prajish Prasad"
@@ -32,10 +32,15 @@ facilitators:
     affiliation: "Ashoka University"
     # photo: "/assets/images/speakers/aalok-thakkar.jpg"
 
+  - id: aalok-thakkar
+    name: "Shitanshu Mishra"
+    affiliation: "UNESCO MGIEP"
+    # photo: "/assets/images/speakers/shitanshu-mishra.jpg"
+
 organisers:
   - id: mrityunjay-kumar
     name: "Mrityunjay Kumar"
-    affiliation: "BITS Pilani"
+    affiliation: "BITS Pilani WILP"
 
   - id: prajish-prasad
     name: "Prajish Prasad"
