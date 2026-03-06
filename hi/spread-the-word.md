@@ -17,7 +17,7 @@ alternate:
 <!-- Flyers Section -->
 <div class="share-section">
   <h3>{{ strings.spread_the_word.flyer_section }}</h3>
-  <p>अपने नेटवर्क के साथ साझा करने के लिए हमारे इवेंट फ्लायर डाउनलोड करें:</p>
+  <p>अपने परिचितों के साथ साझा करने के लिए हमारे आमंत्रण-पत्र डाउनलोड करें:</p>
   <div class="flyer-cards">
     <div class="flyer-card">
       <div class="flyer-card-preview">
@@ -64,9 +64,9 @@ alternate:
 समय: {{ site.data.site.time }}
 जगह: {{ site.data.site.location.name }}
 
-कार्यक्रम में मुख्य भाषण, CS शिक्षा पर पैनल चर्चा, हैंड्स-ऑन वर्कशॉप, और साथियों से मिलने का मौक़ा होगा। रजिस्ट्रेशन मुफ़्त है।
+कार्यक्रम में विशेष व्याख्यान, CS शिक्षा पर चर्चा, हैंड्स-ऑन वर्कशॉप, और समान रुचि वाले संभावित सहयोगियों से मिलने का अवसर होगा। रजिस्ट्रेशन मुफ़्त है।
 
-ज़्यादा जानकारी और रजिस्ट्रेशन: {{ site.url }}/register/
+अधिक जानकारी और रजिस्ट्रेशन: {{ site.url }}/register/
 
 [आपका नाम]</pre>
     <button class="btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2"
@@ -88,7 +88,7 @@ alternate:
 {{ site.data.site.date_display }}
 {{ site.data.site.location.name }}
 
-CS शिक्षकों और रिसर्चर्स के लिए एक दिन: मुख्य भाषण, पैनल चर्चा, वर्कशॉप, और साथियों से मिलने का मौक़ा।
+CS शिक्षकों और शोधकर्ताओं के लिए एक दिन—विशेष व्याख्यान, CS शिक्षा पर चर्चा, हैंड्स-ऑन वर्कशॉप और समान रुचि वाले संभावित सहयोगियों से मिलने का अवसर।
 
 मुफ़्त रजिस्ट्रेशन: {{ site.url }}/register/
 

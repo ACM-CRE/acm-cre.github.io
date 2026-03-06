@@ -44,7 +44,7 @@ alternate:
 </div>
 
 <div class="alert alert-warning mb-5">
-  <strong>पहले से योजना बनाएं:</strong> कैंपस मध्य दिल्ली से ~60 किमी उत्तर में है। ट्रैफ़िक को ध्यान में रखते हुए जल्दी निकलें। कार्यक्रम के दिन सहायता के लिए संपर्क करें: <a href="mailto:{{ site.data.site.social.email }}">{{ site.data.site.social.email }}</a>
+  <strong>पहले से योजना बनाएं:</strong> कैंपस दिल्ली से ~60 किमी उत्तर में है। ट्रैफ़िक को ध्यान में रखते हुए जल्दी निकलें। कार्यक्रम के दिन सहायता के लिए संपर्क करें: <a href="mailto:{{ site.data.site.social.email }}">{{ site.data.site.social.email }}</a>
 </div>
 
 <div class="row mb-5">
@@ -78,7 +78,7 @@ alternate:
       <div class="card-body">
         <h3 class="h5">विकल्प 2: कार या कैब से</h3>
         <p>कैंपस NH-44 (पूर्व में NH-1) के माध्यम से पहुंचा जा सकता है। ट्रैफ़िक के आधार पर मध्य दिल्ली या IGI हवाई अड्डे से 1.5-2 घंटे का समय लगता है।</p>
-        <p class="mb-0"><strong>पार्किंग:</strong> ड्राइव करने वालों के लिए कैंपस में उपलब्ध है।</p>
+        <p class="mb-0"><strong>पार्किंग:</strong> कैंपस में उपलब्ध है।</p>
       </div>
     </div>
   </div>
