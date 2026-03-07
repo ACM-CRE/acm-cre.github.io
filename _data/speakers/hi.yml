@@ -1,0 +1,52 @@
+# People for ACM COMPUTE Regional Event
+
+keynote:
+  - id: keynote-tba
+    name: "To Be Announced"
+    affiliation: "COMPUTE Community"
+    # photo: "/assets/images/speakers/keynote.jpg"
+
+facilitators:
+  - id: mrityunjay-kumar
+    name: "मृत्युंजय कुमार"
+    affiliation: "BITS Pilani"
+    photo: "/assets/images/speakers/mrityunjay-kumar.png"
+
+  - id: prajish-prasad
+    name: "Prajish Prasad"
+    affiliation: "FLAME University"
+    # photo: "/assets/images/speakers/prajish-prasad.jpg"
+
+  - id: shitanshu-mishra
+    name: "Shitanshu Mishra"
+    affiliation: "UNESCO MGIEP"
+    # photo: "/assets/images/speakers/shitanshu-mishra.jpg"
+
+organisers:
+  - id: mrityunjay-kumar
+    name: "मृत्युंजय कुमार"
+    affiliation: "BITS Pilani WILP"
+
+  - id: prajish-prasad
+    name: "Prajish Prasad"
+    affiliation: "FLAME University"
+
+  - id: manu-awasthi
+    name: "Manu Awasthi"
+    affiliation: "IIT Gandhinagar"
+
+  - id: anirban-sen
+    name: "Anirban Sen"
+    affiliation: "Ashoka University"
+
+  - id: aalok-thakkar
+    name: "Aalok Thakkar"
+    affiliation: "Ashoka University"
+
+  - id: nikhil-raj
+    name: "Nikhil Raj"
+    affiliation: "Ashoka University"
+
+  - id: deepraj-pandey
+    name: "Deepraj Pandey"
+    affiliation: "Ashoka University"

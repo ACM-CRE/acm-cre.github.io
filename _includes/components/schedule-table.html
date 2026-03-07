@@ -1,5 +1,6 @@
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
+{% assign speakers = site.data.speakers[lang] %}
 
 <div class="table-responsive">
   <table class="table schedule-table">
@@ -24,7 +25,8 @@
               <small class="text-muted">{{ session.description }}</small>
             {% endif %}
             {% if session.speaker %}
-              {% assign speaker = site.data.speakers | where: "id", session.speaker | first %}
+              {% assign all_speakers = speakers.keynote | concat: speakers.facilitators | concat: speakers.organisers %}
+              {% assign speaker = all_speakers | where: "id", session.speaker | first %}
               {% if speaker %}
                 <small class="d-block text-muted">{{ speaker.name }}, {{ speaker.affiliation }}</small>
               {% endif %}

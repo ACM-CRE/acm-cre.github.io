@@ -458,6 +458,12 @@ section {
   }
 }
 
+.speaker-card--compact {
+  background: $color-bg-subtle;
+  border: 1px solid $color-border;
+  padding: $space-sm;
+}
+
 // =============================================================================
 // Sponsors
 // =============================================================================

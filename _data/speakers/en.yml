@@ -10,29 +10,14 @@ facilitators:
   - id: mrityunjay-kumar
     name: "Mrityunjay Kumar"
     affiliation: "BITS Pilani"
-    # photo: "/assets/images/speakers/mrityunjay-kumar.png"
+    photo: "/assets/images/speakers/mrityunjay-kumar.png"
 
   - id: prajish-prasad
     name: "Prajish Prasad"
     affiliation: "FLAME University"
     # photo: "/assets/images/speakers/prajish-prasad.jpg"
 
-  - id: manu-awasthi
-    name: "Manu Awasthi"
-    affiliation: "IIT Gandhinagar"
-    # photo: "/assets/images/speakers/manu-awasthi.jpg"
-
-  - id: anirban-sen
-    name: "Anirban Sen"
-    affiliation: "Ashoka University"
-    # photo: "/assets/images/speakers/anirban-sen.jpg"
-
-  - id: aalok-thakkar
-    name: "Aalok Thakkar"
-    affiliation: "Ashoka University"
-    # photo: "/assets/images/speakers/aalok-thakkar.jpg"
-
-  - id: aalok-thakkar
+  - id: shitanshu-mishra
     name: "Shitanshu Mishra"
     affiliation: "UNESCO MGIEP"
     # photo: "/assets/images/speakers/shitanshu-mishra.jpg"
