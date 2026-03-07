@@ -1,10 +1,10 @@
 # People for ACM COMPUTE Regional Event
 
-keynote:
-  - id: keynote-tba
-    name: "To Be Announced"
-    affiliation: "COMPUTE Community"
-    # photo: "/assets/images/speakers/keynote.jpg"
+# keynote:
+#   - id: keynote-tba
+#     name: "To Be Announced"
+#     affiliation: "COMPUTE Community"
+#     # photo: "/assets/images/speakers/keynote.jpg"
 
 facilitators:
   - id: mrityunjay-kumar
