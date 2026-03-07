@@ -22,6 +22,11 @@ facilitators:
     affiliation: "UNESCO MGIEP"
     # photo: "/assets/images/speakers/shitanshu-mishra.jpg"
 
+  - id: viraj-kumar
+    name: "विराज कुमार"
+    affiliation: "IISc Bangalore"
+    photo: "/assets/images/speakers/viraj-kumar.png"
+
 organisers:
   - id: mrityunjay-kumar
     name: "मृत्युंजय कुमार"
