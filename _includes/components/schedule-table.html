@@ -1,6 +1,6 @@
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
-{% assign speakers = site.data.speakers[lang] %}
+{% assign speakers = site.data.content.speakers[lang] %}
 
 <div class="table-responsive">
   <table class="table schedule-table">
@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      {% for session in site.data.schedule %}
+      {% for session in site.data.content.schedule %}
         <tr>
           <td class="session-time">
             {{ session.time }}{% if session.end_time %} – {{ session.end_time }}{% endif %}

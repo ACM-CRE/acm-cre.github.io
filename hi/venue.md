@@ -14,26 +14,26 @@ alternate:
 
 <div class="row mb-5">
   <div class="col-lg-6 mb-4 mb-lg-0">
-    <h2 class="h4">{{ site.data.site.location.name }}</h2>
+    <h2 class="h4">{{ site.data.config.site.location.name }}</h2>
     <p>
       त्रिवेदी स्कूल ऑफ बायोसाइंसेज, नॉर्थ कैंपस<br>
-      {{ site.data.site.location.address }}
+      {{ site.data.config.site.location.address }}
     </p>
     <p>
-      <a href="{{ site.data.site.location.url }}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm me-2">
+      <a href="{{ site.data.config.site.location.url }}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm me-2">
         विश्वविद्यालय वेबसाइट पर जाएं
       </a>
-      <a href="{{ site.data.site.location.map_url }}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm">
+      <a href="{{ site.data.config.site.location.map_url }}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm">
         Google Maps में खोलें
       </a>
     </p>
   </div>
 
   <div class="col-lg-6">
-    {% if site.data.site.location.map_embed_url %}
+    {% if site.data.config.site.location.map_embed_url %}
       <div class="venue-map">
         <iframe
-          src="{{ site.data.site.location.map_embed_url }}"
+          src="{{ site.data.config.site.location.map_embed_url }}"
           title="स्थान का नक्शा"
           loading="lazy"
           allowfullscreen>
@@ -44,7 +44,7 @@ alternate:
 </div>
 
 <div class="alert alert-warning mb-5">
-  <strong>पहले से योजना बनाएं:</strong> कैंपस दिल्ली से ~60 किमी उत्तर में है। ट्रैफ़िक को ध्यान में रखते हुए जल्दी निकलें। कार्यक्रम के दिन सहायता के लिए संपर्क करें: <a href="mailto:{{ site.data.site.social.email }}">{{ site.data.site.social.email }}</a>
+  <strong>पहले से योजना बनाएं:</strong> कैंपस दिल्ली से ~60 किमी उत्तर में है। ट्रैफ़िक को ध्यान में रखते हुए जल्दी निकलें। कार्यक्रम के दिन सहायता के लिए संपर्क करें: <a href="mailto:{{ site.data.config.site.social.email }}">{{ site.data.config.site.social.email }}</a>
 </div>
 
 <div class="row mb-5">
@@ -84,14 +84,14 @@ alternate:
   </div>
 </div>
 
-{% if site.data.site.accommodation.available %}
+{% if site.data.config.site.accommodation.available %}
 <div class="row mb-5">
   <div class="col-lg-8">
     <div class="card border-0 bg-light">
       <div class="card-body">
         <h2 class="h5 mb-3">आवास</h2>
-        <p>यदि आपको आवास की आवश्यकता है, तो {{ site.data.site.accommodation.location }} में <strong>{{ site.data.site.accommodation.name }}</strong> उपलब्ध है।</p>
-        <p class="mb-0"><strong>दर:</strong> {{ site.data.site.accommodation.price }}</p>
+        <p>यदि आपको आवास की आवश्यकता है, तो {{ site.data.config.site.accommodation.location }} में <strong>{{ site.data.config.site.accommodation.name }}</strong> उपलब्ध है।</p>
+        <p class="mb-0"><strong>दर:</strong> {{ site.data.config.site.accommodation.price }}</p>
         <p class="small text-muted mt-3 mb-0">बुकिंग सहायता के लिए आयोजकों से संपर्क करें।</p>
       </div>
     </div>

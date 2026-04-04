@@ -12,7 +12,7 @@ alternate:
 
 <h1>{{ strings.schedule.heading }}</h1>
 
-<p class="lead mb-4">{{ site.data.site.date_display }} &middot; {{ site.data.site.time }}</p>
+<p class="lead mb-4">{{ site.data.config.site.date_display }} &middot; {{ site.data.config.site.time }}</p>
 
 {% include components/schedule-table.html %}
 

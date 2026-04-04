@@ -23,7 +23,7 @@
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          {% for item in site.data.navigation %}
+          {% for item in site.data.config.navigation %}
             {% assign nav_title = strings.nav[item.key] %}
             {% assign nav_url = lang_prefix | append: item.url %}
             <li class="nav-item">

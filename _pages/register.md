@@ -18,7 +18,7 @@ alternate:
       <strong>Free Registration.</strong> No fees for this event. All participants receive a certificate of participation.
     </div>
 
-    {% include components/embed-form.html url=site.data.site.registration.form_url %}
+    {% include components/embed-form.html url=site.data.config.site.registration.form_url %}
   </div>
 </div>
 

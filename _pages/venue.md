@@ -14,26 +14,26 @@ alternate:
 
 <div class="row mb-5">
   <div class="col-lg-6 mb-4 mb-lg-0">
-    <h2 class="h4">{{ site.data.site.location.name }}</h2>
+    <h2 class="h4">{{ site.data.config.site.location.name }}</h2>
     <p>
       Trivedi School of Biosciences, North Campus<br>
-      {{ site.data.site.location.address }}
+      {{ site.data.config.site.location.address }}
     </p>
     <p>
-      <a href="{{ site.data.site.location.url }}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm me-2">
+      <a href="{{ site.data.config.site.location.url }}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm me-2">
         Visit University Website
       </a>
-      <a href="{{ site.data.site.location.map_url }}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm">
+      <a href="{{ site.data.config.site.location.map_url }}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm">
         Open in Google Maps
       </a>
     </p>
   </div>
 
   <div class="col-lg-6">
-    {% if site.data.site.location.map_embed_url %}
+    {% if site.data.config.site.location.map_embed_url %}
       <div class="venue-map">
         <iframe
-          src="{{ site.data.site.location.map_embed_url }}"
+          src="{{ site.data.config.site.location.map_embed_url }}"
           title="Venue location map"
           loading="lazy"
           allowfullscreen>
@@ -44,7 +44,7 @@ alternate:
 </div>
 
 <div class="alert alert-warning mb-5">
-  <strong>Plan ahead:</strong> The campus is ~60 km north of Central Delhi. Leave early to account for traffic. For day-of assistance, contact <a href="mailto:{{ site.data.site.social.email }}">{{ site.data.site.social.email }}</a>
+  <strong>Plan ahead:</strong> The campus is ~60 km north of Central Delhi. Leave early to account for traffic. For day-of assistance, contact <a href="mailto:{{ site.data.config.site.social.email }}">{{ site.data.config.site.social.email }}</a>
 </div>
 
 <div class="row mb-5">
@@ -84,14 +84,14 @@ alternate:
   </div>
 </div>
 
-{% if site.data.site.accommodation.available %}
+{% if site.data.config.site.accommodation.available %}
 <div class="row mb-5">
   <div class="col-lg-8">
     <div class="card border-0 bg-light">
       <div class="card-body">
         <h2 class="h5 mb-3">Accommodation</h2>
-        <p>If you need accommodation, the <strong>{{ site.data.site.accommodation.name }}</strong> at {{ site.data.site.accommodation.location }} is available.</p>
-        <p class="mb-0"><strong>Rate:</strong> {{ site.data.site.accommodation.price }}</p>
+        <p>If you need accommodation, the <strong>{{ site.data.config.site.accommodation.name }}</strong> at {{ site.data.config.site.accommodation.location }} is available.</p>
+        <p class="mb-0"><strong>Rate:</strong> {{ site.data.config.site.accommodation.price }}</p>
         <p class="small text-muted mt-3 mb-0">Contact the organisers for booking assistance.</p>
       </div>
     </div>

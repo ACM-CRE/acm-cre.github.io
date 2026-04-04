@@ -4,7 +4,7 @@
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
 
-<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.site.event_name }}</title>
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.config.site.event_name }}</title>
 
 <!-- Google Fonts: Outfit -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,22 +26,22 @@
 {
   "@context": "https://schema.org",
   "@type": "Event",
-  "name": "{{ site.data.site.event_name }}",
-  "description": "{{ site.data.site.tagline }}",
-  "startDate": "{{ site.data.site.date }}",
-  "endDate": "{{ site.data.site.date }}",
+  "name": "{{ site.data.config.site.event_name }}",
+  "description": "{{ site.data.config.site.tagline }}",
+  "startDate": "{{ site.data.config.site.date }}",
+  "endDate": "{{ site.data.config.site.date }}",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "location": {
     "@type": "Place",
-    "name": "{{ site.data.site.location.name }}",
-    "address": "{{ site.data.site.location.address }}"
+    "name": "{{ site.data.config.site.location.name }}",
+    "address": "{{ site.data.config.site.location.address }}"
   },
   "organizer": {
     "@type": "Organization",
     "name": "ACM COMPUTE Regional",
     "url": "{{ site.url }}{{ site.baseurl }}"
   },
-  "image": "{{ site.data.site.hero_image | prepend: site.baseurl | prepend: site.url }}"
+  "image": "{{ site.data.config.site.hero_image | prepend: site.baseurl | prepend: site.url }}"
 }
 </script>

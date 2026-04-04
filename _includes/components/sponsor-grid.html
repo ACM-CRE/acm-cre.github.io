@@ -1,7 +1,7 @@
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
 
-{% for tier in site.data.sponsors.tiers %}
+{% for tier in site.data.content.sponsors.tiers %}
   <div class="sponsor-tier">
     <h3>{{ tier.name }}</h3>
     <div class="row justify-content-center align-items-center g-4">

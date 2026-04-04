@@ -11,7 +11,7 @@ alternate:
 {% assign strings = site.data.strings.hi %}
 
 {% assign has_sponsors = false %}
-{% for tier in site.data.sponsors.tiers %}
+{% for tier in site.data.content.sponsors.tiers %}
   {% if tier.sponsors.size > 0 %}
     {% assign has_sponsors = true %}
     {% break %}
@@ -63,7 +63,7 @@ alternate:
             <p class="text-muted mb-md-0">हम आपके लक्ष्यों और बजट के अनुरूप लचीले प्रायोजन स्तर प्रदान करते हैं। आइए चर्चा करें कि हम एक साथ कैसे काम कर सकते हैं।</p>
           </div>
           <div class="col-md-4 text-md-end">
-            <a href="mailto:{{ site.data.sponsors.sponsorship_email }}?subject=COMPUTE%20Regional%20Event%20Sponsorship%20Inquiry" class="btn btn-primary">
+            <a href="mailto:{{ site.data.content.sponsors.sponsorship_email }}?subject=COMPUTE%20Regional%20Event%20Sponsorship%20Inquiry" class="btn btn-primary">
               संपर्क करें
             </a>
           </div>

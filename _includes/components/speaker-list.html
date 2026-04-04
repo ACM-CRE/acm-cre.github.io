@@ -1,6 +1,6 @@
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
-{% assign speakers = site.data.speakers[lang] %}
+{% assign speakers = site.data.content.speakers[lang] %}
 
 {% if speakers.keynote.size > 0 %}
 {% assign section_has_photos = false %}

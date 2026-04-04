@@ -68,9 +68,9 @@ alternate:
       <div class="col-lg-6 mb-4 mb-lg-0">
         <h2>Event Details</h2>
         <ul class="list-unstyled">
-          <li class="mb-2"><strong>Date:</strong> {{ site.data.site.date_display }}</li>
-          <li class="mb-2"><strong>Time:</strong> {{ site.data.site.time }}</li>
-          <li class="mb-2"><strong>Venue:</strong> <a href="{{ site.data.site.location.url }}" target="_blank" rel="noopener">{{ site.data.site.location.name }}</a></li>
+          <li class="mb-2"><strong>Date:</strong> {{ site.data.config.site.date_display }}</li>
+          <li class="mb-2"><strong>Time:</strong> {{ site.data.config.site.time }}</li>
+          <li class="mb-2"><strong>Venue:</strong> <a href="{{ site.data.config.site.location.url }}" target="_blank" rel="noopener">{{ site.data.config.site.location.name }}</a></li>
           <li class="mb-2"><strong>Registration:</strong> Free</li>
         </ul>
         <a href="{{ '/register/' | relative_url }}" class="btn btn-primary btn-lg">Register Now</a>

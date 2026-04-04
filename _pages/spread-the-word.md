@@ -12,7 +12,7 @@ alternate:
 
 <h1>{{ strings.spread_the_word.heading }}</h1>
 
-<p class="lead mb-4">Help us spread the word about {{ site.data.site.event_name }}!</p>
+<p class="lead mb-4">Help us spread the word about {{ site.data.config.site.event_name }}!</p>
 
 <!-- Flyers Section -->
 <div class="share-section">
@@ -46,7 +46,7 @@ alternate:
 
   <h4 class="h6">{{ strings.spread_the_word.email_subject }}</h4>
   <div class="position-relative">
-    <pre id="email-subject">Invitation: {{ site.data.site.event_name }} – Free Registration Open</pre>
+    <pre id="email-subject">Invitation: {{ site.data.config.site.event_name }} – Free Registration Open</pre>
     <button class="btn btn-sm btn-outline-secondary copy-btn position-absolute top-0 end-0 m-2"
             data-copy-target="email-subject"
             data-copied-text="{{ strings.spread_the_word.copied }}">
@@ -58,11 +58,11 @@ alternate:
   <div class="position-relative">
     <pre id="email-body">Dear colleagues,
 
-I am writing to invite you to {{ site.data.site.event_name }}, a one-day gathering for CS educators and researchers hosted by Ashoka University and ACM India iSIGCSE.
+I am writing to invite you to {{ site.data.config.site.event_name }}, a one-day gathering for CS educators and researchers hosted by Ashoka University and ACM India iSIGCSE.
 
-Date: {{ site.data.site.date_display }}
-Time: {{ site.data.site.time }}
-Venue: {{ site.data.site.location.name }}
+Date: {{ site.data.config.site.date_display }}
+Time: {{ site.data.config.site.time }}
+Venue: {{ site.data.config.site.location.name }}
 
 The day includes a keynote, a panel discussion on CS education, hands-on workshops, and time to connect with peers. Registration is free.
 
@@ -84,10 +84,10 @@ Best regards,
 
   <h4 class="h6">{{ strings.spread_the_word.twitter_post }}</h4>
   <div class="position-relative">
-    <pre id="twitter-post">{{ site.data.site.event_name }}
+    <pre id="twitter-post">{{ site.data.config.site.event_name }}
 
-{{ site.data.site.date_display }}
-{{ site.data.site.location.name }}
+{{ site.data.config.site.date_display }}
+{{ site.data.config.site.location.name }}
 
 A day for CS educators and researchers: keynote, panel discussion, workshops, and peer connections.
 
@@ -103,12 +103,12 @@ Free registration: {{ site.url }}/register/
 
   <h4 class="h6 mt-3">{{ strings.spread_the_word.linkedin_post }}</h4>
   <div class="position-relative">
-    <pre id="linkedin-post">{{ site.data.site.event_name }} is a one-day regional gathering for CS educators and researchers.
+    <pre id="linkedin-post">{{ site.data.config.site.event_name }} is a one-day regional gathering for CS educators and researchers.
 
 Hosted by Ashoka University and ACM India iSIGCSE.
 
-{{ site.data.site.date_display }}
-{{ site.data.site.location.name }}
+{{ site.data.config.site.date_display }}
+{{ site.data.config.site.location.name }}
 
 The programme includes:
 – Keynote talk
