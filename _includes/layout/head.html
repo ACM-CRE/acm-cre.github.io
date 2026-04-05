@@ -1,3 +1,26 @@
+{% comment %}
+HTML Head Component
+Renders meta tags, stylesheets, fonts, SEO tags, and structured data.
+
+Data:
+  site.data.config.site
+    - event_name: used in <title> and structured data
+    - tagline: structured data description
+    - date: structured data event date
+    - location.name, location.address: structured data
+    - hero_image: structured data image
+
+  page.feature (optional): if set and site.features[feature] is false,
+    adds noindex meta tag for SEO safety
+
+Plugins:
+  jekyll-seo-tag: generates Open Graph and meta tags
+
+Assets:
+  /assets/css/style.css (compiled Bootstrap + custom styles)
+  /assets/images/favicon.png, apple-touch-icon.png
+{% endcomment %}
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 

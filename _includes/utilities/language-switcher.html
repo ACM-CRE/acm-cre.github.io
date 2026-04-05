@@ -1,3 +1,23 @@
+{% comment %}
+Language Switcher Component
+Renders a dropdown to switch between available languages.
+
+Feature toggle: Only renders if site.features.i18n is true.
+
+Data:
+  site.data.strings (iterated to find available languages)
+  page.alternate (object mapping lang codes to URLs)
+    Example: { en: "/", hi: "/hi/" }
+
+Strings: site.data.strings[lang].language_switcher
+  - Keys matching language codes (en, hi, etc.) with display names
+
+Behavior:
+  - Shows current language as active (non-clickable)
+  - Shows other languages as links if page.alternate[lang] exists
+  - Hidden entirely if site.features.i18n is false
+{% endcomment %}
+
 {% if site.features.i18n %}
 {% assign current_lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[current_lang] %}

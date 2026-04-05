@@ -1,3 +1,19 @@
+{% comment %}
+Embed Form Component
+Embeds an external form (e.g., Tally, Google Forms) in an iframe.
+
+Parameters (passed via include):
+  - url: "https://tally.so/r/xxxxx" (required, the form embed URL)
+
+Strings: site.data.strings[lang].register
+  - heading: used as iframe title for accessibility
+  - embed_fallback: shown if iframe doesn't load
+  - instructions: text before direct link
+
+Usage:
+  {% include components/embed-form.html url=site.data.config.site.registration.form_url %}
+{% endcomment %}
+
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
 

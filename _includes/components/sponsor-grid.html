@@ -1,3 +1,18 @@
+{% comment %}
+Sponsor Grid Component
+Renders sponsors grouped by tier with logos.
+
+Data: site.data.content.sponsors
+  - tiers: array of tier objects
+    - name: "Platinum" (required, displayed as heading)
+    - sponsors: array of sponsor objects
+      - name: "Company Name" (required)
+      - logo: "/assets/images/sponsors/logo.png" (optional)
+      - url: "https://example.com" (optional, makes logo clickable)
+
+Strings: none required
+{% endcomment %}
+
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
 

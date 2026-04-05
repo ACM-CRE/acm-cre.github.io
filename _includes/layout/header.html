@@ -1,3 +1,22 @@
+{% comment %}
+Site Header Component
+Renders the navigation bar with logo, nav links, language switcher, and register CTA.
+
+Data:
+  site.data.config.navigation (array of nav items)
+    - key: "schedule" (required, used to look up translated title)
+    - url: "/schedule/" (required)
+    - feature: "venue" (optional, hides item if site.features[feature] is false)
+
+  site.features (for conditional nav items)
+
+Strings: site.data.strings[lang].nav
+  - Keys matching navigation item keys (schedule, people, venue, etc.)
+  - register: CTA button text
+
+Includes: utilities/language-switcher.html
+{% endcomment %}
+
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
 {% assign lang_prefix = "" %}

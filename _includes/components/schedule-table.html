@@ -1,3 +1,24 @@
+{% comment %}
+Schedule Table Component
+Renders the event schedule as a responsive table.
+
+Data:
+  site.data.content.schedule (array of sessions)
+    - time: "09:00" (required)
+    - end_time: "10:00" (optional)
+    - title: "Session Title" (required)
+    - type: keynote|workshop|discussion|break|ceremony (required)
+    - speaker: "speaker-id" (optional, must match id in speakers data)
+    - description: "Short description" (optional)
+
+  site.data.content.speakers[lang] (for speaker lookup)
+    - keynote, facilitators, organisers arrays with {id, name, affiliation}
+
+Strings: site.data.strings[lang].schedule
+  - time_column: column header for time
+  - session_column: column header for session
+{% endcomment %}
+
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
 {% assign speakers = site.data.content.speakers[lang] %}

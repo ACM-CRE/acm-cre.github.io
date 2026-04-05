@@ -1,3 +1,21 @@
+{% comment %}
+Site Footer Component
+Renders organiser logos, contact info, copyright, and attribution.
+
+Data:
+  site.data.config.site.social.email (for contact link)
+
+Strings: site.data.strings[lang]
+  - home.date_display: event date shown in footer
+  - footer.contact: contact link text
+  - footer.copyright: copyright text
+  - footer.built_by: attribution text
+
+Assets:
+  /assets/images/organisers/*.svg|jpg|png (organiser logos)
+  /assets/images/social/github.svg (GitHub icon)
+{% endcomment %}
+
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
 

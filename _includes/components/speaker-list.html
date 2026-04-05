@@ -1,3 +1,28 @@
+{% comment %}
+Speaker List Component
+Renders keynote speakers, facilitators, and organisers in card grids.
+
+Data: site.data.content.speakers[lang]
+  - keynote: array (optional, renders if non-empty)
+  - facilitators: array (optional, renders if non-empty)
+  - organisers: array (optional, renders if non-empty)
+
+  Each person object:
+    - id: "jane-doe" (required, used for schedule linking)
+    - name: "Dr. Jane Doe" (required)
+    - affiliation: "University Name" (required)
+    - photo: "/assets/images/speakers/jane-doe.jpg" (optional)
+
+Strings: site.data.strings[lang].people
+  - keynote: section heading
+  - facilitators: section heading
+  - organisers: section heading
+
+Behavior:
+  - If any person in a section has a photo, shows photo placeholders for those without
+  - If no one in a section has photos, renders compact cards (no photo area)
+{% endcomment %}
+
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
 {% assign speakers = site.data.content.speakers[lang] %}
