@@ -14,6 +14,7 @@ alternate:
 
 <p class="lead mb-4">{{ site.data.config.site.event_name }} के बारे में प्रचार करने में हमारी मदद करें!</p>
 
+{% if site.features.flyer %}
 <!-- Flyers Section -->
 <div class="share-section">
   <h3>{{ strings.spread_the_word.flyer_section }}</h3>
@@ -39,6 +40,7 @@ alternate:
     </div>
   </div>
 </div>
+{% endif %}
 
 <!-- Email Template Section -->
 <div class="share-section">

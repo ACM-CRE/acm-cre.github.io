@@ -230,6 +230,15 @@
   </style>
 </head>
 <body>
+{% if site.features.flyer == false %}
+  <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 40px;">
+    <div>
+      <h1 style="margin-bottom: 16px;">Page Not Available</h1>
+      <p style="color: #666; margin-bottom: 24px;">This page is not currently available.</p>
+      <a href="{{ '/' | relative_url }}" style="color: #C45C3E;">Go to Homepage</a>
+    </div>
+  </div>
+{% else %}
   <div class="flyer">
     <span class="flyer-bracket flyer-bracket--left">[</span>
     <span class="flyer-bracket flyer-bracket--right">]</span>
@@ -238,5 +247,6 @@
       {{ content }}
     </div>
   </div>
+{% endif %}
 </body>
 </html>

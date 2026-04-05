@@ -1,5 +1,7 @@
 ---
 title: Sponsors
+layout: feature-page
+feature: sponsors
 lang: en
 alternate:
   hi: /hi/sponsors/

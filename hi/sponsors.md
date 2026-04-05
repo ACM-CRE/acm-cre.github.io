@@ -1,5 +1,7 @@
 ---
 title: प्रायोजक
+layout: feature-page
+feature: sponsors
 lang: hi
 permalink: /hi/sponsors/
 alternate:

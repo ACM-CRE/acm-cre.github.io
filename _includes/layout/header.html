@@ -24,13 +24,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           {% for item in site.data.config.navigation %}
-            {% assign nav_title = strings.nav[item.key] %}
-            {% assign nav_url = lang_prefix | append: item.url %}
-            <li class="nav-item">
-              <a class="nav-link{% if page.url == nav_url %} active{% endif %}" {% if page.url == nav_url %}aria-current="page"{% endif %} href="{{ nav_url | relative_url }}">
-                {{ nav_title }}
-              </a>
-            </li>
+            {% assign show_item = true %}
+            {% if item.feature %}
+              {% assign show_item = site.features[item.feature] %}
+            {% endif %}
+            {% if show_item %}
+              {% assign nav_title = strings.nav[item.key] %}
+              {% assign nav_url = lang_prefix | append: item.url %}
+              <li class="nav-item">
+                <a class="nav-link{% if page.url == nav_url %} active{% endif %}" {% if page.url == nav_url %}aria-current="page"{% endif %} href="{{ nav_url | relative_url }}">
+                  {{ nav_title }}
+                </a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
 

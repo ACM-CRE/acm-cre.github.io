@@ -1,5 +1,7 @@
 ---
 title: Venue
+layout: feature-page
+feature: venue
 lang: en
 alternate:
   hi: /hi/venue/

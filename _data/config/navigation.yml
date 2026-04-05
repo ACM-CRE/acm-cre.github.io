@@ -4,7 +4,10 @@
   url: /people/
 - key: venue
   url: /venue/
+  feature: venue
 - key: sponsors
   url: /sponsors/
+  feature: sponsors
 - key: flyers
   url: /spread-the-word/
+  feature: flyer

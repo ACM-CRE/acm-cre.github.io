@@ -5,6 +5,13 @@ baseurl: ""
 
 lang: en
 
+# Feature toggles (set to false to disable)
+features:
+  i18n: true        # Multi-language support and language switcher
+  sponsors: true    # Sponsors page and section
+  flyer: true       # Flyer page and spread-the-word flyer section
+  venue: true       # Venue page
+
 # Build settings
 markdown: kramdown
 permalink: pretty

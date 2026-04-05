@@ -51,10 +51,12 @@ permalink: /hi/flyer/
   <div class="flyer-cta-left">
     <p class="flyer-cta-text">अभी पंजीकरण करें</p>
     <p class="flyer-url">acm-cre.github.io/register</p>
+{% if site.features.sponsors %}
     <div class="flyer-sponsor">
       <span>प्रायोजक</span>
       <img src="{{ '/assets/images/sponsors/mphasis_f1_logo.png' | relative_url }}" alt="Mphasis">
     </div>
+{% endif %}
   </div>
   <div class="flyer-qr">
     <img src="{{ '/assets/images/QR_burst.short.gy_acm-cre.svg' | relative_url }}" alt="पंजीकरण के लिए QR कोड">

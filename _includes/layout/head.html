@@ -21,6 +21,11 @@
 <!-- SEO -->
 {% seo %}
 
+<!-- Noindex for disabled feature pages -->
+{% if page.feature and site.features[page.feature] == false %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
+
 <!-- Schema.org Event structured data -->
 <script type="application/ld+json">
 {

@@ -1,5 +1,7 @@
 ---
 title: स्थान
+layout: feature-page
+feature: venue
 lang: hi
 permalink: /hi/venue/
 alternate:

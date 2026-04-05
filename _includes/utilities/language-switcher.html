@@ -1,3 +1,4 @@
+{% if site.features.i18n %}
 {% assign current_lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[current_lang] %}
 
@@ -23,3 +24,4 @@
     {% endfor %}
   </ul>
 </div>
+{% endif %}
