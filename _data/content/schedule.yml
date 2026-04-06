@@ -22,17 +22,17 @@
   type: discussion
   description: "We will pick pertinent topics, collect feedback from attendees, and discuss in groups. The idea is to frame problems and suggest solutions and collaborations that can address them—regionally and nationally. No presentations, only discussions and problem-solving. Every attendee should leave with an idea or problem they can use in the workshop sessions."
   facilitators:
-    - "Mrityunjay Kumar"
-    - "Prajish Prasad"
-  
+    - mrityunjay-kumar
+    - prajish-prasad
+
 - time: "11:30"
   end_time: "13:30"
   title: "Educator Workshop"
   type: workshop
   description: "For CS educators who have ideas on creative ways of teaching in their classroom, or have already tried these, and would like to polish it into an experience report. The workshop will help structure the report and answer specific questions. Hands-on, group-based."
   facilitators:
-    - "Prajish Prasad"
-    - "Mrityunjay Kumar"
+    - prajish-prasad
+    - mrityunjay-kumar
 
 - time: "13:30"
   end_time: "15:00"
@@ -46,9 +46,9 @@
   type: workshop
   description: "For CSEd researchers (current or budding) working on a research paper submission, or have ideas to design a study around. They may be starting from a previously rejected paper, a new study they are engaged in, or just have an idea that needs input. The workshop will help prepare for submission to COMPUTE or similar conferences and journals."
   facilitators:
-    - "Shitanshu Mishra"
-    - "Prajish Prasad"
-  
+    - shitanshu-mishra
+    - prajish-prasad
+
 - time: "17:30"
   end_time: "18:00"
   title: "Closing"

@@ -8,7 +8,9 @@ Data:
     - end_time: "10:00" (optional)
     - title: "Session Title" (required)
     - type: keynote|workshop|discussion|break|ceremony (required)
-    - speaker: "speaker-id" (optional, must match id in speakers data)
+    - speaker: "speaker-id" (optional, single speaker)
+    - speakers: ["id1", "id2"] (optional, multiple speakers)
+    - facilitators: ["id1", "id2"] (optional, facilitator IDs)
     - description: "Short description" (optional)
 
   site.data.content.speakers[lang] (for speaker lookup)
@@ -21,7 +23,8 @@ Strings: site.data.strings[lang].schedule
 
 {% assign lang = page.lang | default: site.lang | default: "en" %}
 {% assign strings = site.data.strings[lang] %}
-{% assign speakers = site.data.content.speakers[lang] %}
+{% assign speakers_data = site.data.content.speakers[lang] %}
+{% assign all_speakers = speakers_data.keynote | concat: speakers_data.facilitators | concat: speakers_data.organisers %}
 
 <div class="table-responsive">
   <table class="table schedule-table">
@@ -46,11 +49,29 @@ Strings: site.data.strings[lang].schedule
               <small class="text-muted">{{ session.description }}</small>
             {% endif %}
             {% if session.speaker %}
-              {% assign all_speakers = speakers.keynote | concat: speakers.facilitators | concat: speakers.organisers %}
               {% assign speaker = all_speakers | where: "id", session.speaker | first %}
               {% if speaker %}
                 <small class="d-block text-muted">{{ speaker.name }}, {{ speaker.affiliation }}</small>
               {% endif %}
+            {% endif %}
+            {% if session.speakers %}
+              {% for speaker_id in session.speakers %}
+                {% assign speaker = all_speakers | where: "id", speaker_id | first %}
+                {% if speaker %}
+                  <small class="d-block text-muted">{{ speaker.name }}, {{ speaker.affiliation }}</small>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+            {% if session.facilitators %}
+              <small class="d-block text-muted">
+                Facilitators:
+                {% for facilitator_id in session.facilitators %}
+                  {% assign facilitator = all_speakers | where: "id", facilitator_id | first %}
+                  {% if facilitator %}
+                    {{ facilitator.name }}{% unless forloop.last %}, {% endunless %}
+                  {% endif %}
+                {% endfor %}
+              </small>
             {% endif %}
           </td>
         </tr>
