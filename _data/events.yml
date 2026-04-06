@@ -1,0 +1,19 @@
+# ACM COMPUTE Regional Events
+# Add upcoming and past events here
+
+upcoming: []
+  # - name: "Delhi University CRE"
+  #   date: "2026-04-15"
+  #   date_display: "April 15, 2026"
+  #   location: "Delhi, India"
+  #   url: "https://du-cre.github.io"
+
+past:
+  - name: "Ashoka University CRE"
+    date: "2026-03-21"
+    date_display: "March 21, 2026"
+    location: "Sonipat, India"
+    host: "Ashoka University"
+    archive_path: "/events/ashoka-2026/"
+    # photos:
+    #   - "/assets/images/events/ashoka-2026/group.jpg"

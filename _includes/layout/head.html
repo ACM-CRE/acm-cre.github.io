@@ -1,33 +1,11 @@
 {% comment %}
-HTML Head Component
-Renders meta tags, stylesheets, fonts, SEO tags, and structured data.
-
-Data:
-  site.data.config.site
-    - event_name: used in <title> and structured data
-    - tagline: structured data description
-    - date: structured data event date
-    - location.name, location.address: structured data
-    - hero_image: structured data image
-
-  page.feature (optional): if set and site.features[feature] is false,
-    adds noindex meta tag for SEO safety
-
-Plugins:
-  jekyll-seo-tag: generates Open Graph and meta tags
-
-Assets:
-  /assets/css/style.css (compiled Bootstrap + custom styles)
-  /assets/images/favicon.png, apple-touch-icon.png
+HTML Head Component for ACM CRE Hub
 {% endcomment %}
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% assign lang = page.lang | default: site.lang | default: "en" %}
-{% assign strings = site.data.strings[lang] %}
-
-<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.config.site.event_name }}</title>
+<title>{% if page.title and page.title != "Home" %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
 <!-- Google Fonts: Outfit -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,33 +21,3 @@ Assets:
 
 <!-- SEO -->
 {% seo %}
-
-<!-- Noindex for disabled feature pages -->
-{% if page.feature and site.features[page.feature] == false %}
-<meta name="robots" content="noindex, nofollow">
-{% endif %}
-
-<!-- Schema.org Event structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "{{ site.data.config.site.event_name }}",
-  "description": "{{ site.data.config.site.tagline }}",
-  "startDate": "{{ site.data.config.site.date }}",
-  "endDate": "{{ site.data.config.site.date }}",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "location": {
-    "@type": "Place",
-    "name": "{{ site.data.config.site.location.name }}",
-    "address": "{{ site.data.config.site.location.address }}"
-  },
-  "organizer": {
-    "@type": "Organization",
-    "name": "ACM COMPUTE Regional",
-    "url": "{{ site.url }}{{ site.baseurl }}"
-  },
-  "image": "{{ site.data.config.site.hero_image | prepend: site.baseurl | prepend: site.url }}"
-}
-</script>

@@ -1,0 +1,156 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <div class="container text-center">
+    <h1 class="hero-title">COMPUTE Regional Events</h1>
+    <p class="hero-subtitle">For Computing Educators & Researchers</p>
+    <p class="hero-description">
+      Regional gatherings that bring together CS educators and researchers to share experiences and strengthen the computing education community.
+    </p>
+    <div class="hero-cta">
+      <a href="#events" class="btn btn-primary btn-lg">View Events</a>
+      <a href="https://acm-cre.github.io/docs/" class="btn btn-outline-primary btn-lg">Host an Event</a>
+    </div>
+  </div>
+</section>
+
+<section id="events" class="py-5">
+  <div class="container">
+    {% if site.data.events.upcoming.size > 0 %}
+    <h2 class="text-center mb-4">Upcoming Events</h2>
+    <div class="row g-4 mb-5 justify-content-center">
+      {% for event in site.data.events.upcoming %}
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 event-card">
+          <div class="card-body">
+            <h3 class="h5 card-title">{{ event.name }}</h3>
+            <p class="card-text text-muted">
+              {{ event.date_display }}<br>
+              {{ event.location }}
+            </p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="{{ event.url }}" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+              Visit Site →
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <h2 class="text-center mb-4">Past Events</h2>
+    {% if site.data.events.past.size > 0 %}
+    <div class="row g-4 justify-content-center">
+      {% for event in site.data.events.past %}
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 event-card event-card-past">
+          <div class="card-body">
+            <h3 class="h5 card-title">{{ event.name }}</h3>
+            <p class="card-text text-muted">
+              {{ event.date_display }}<br>
+              {{ event.location }}
+            </p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="{{ event.archive_path }}" class="btn btn-outline-secondary btn-sm">
+              View Archive →
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-center text-muted">No past events yet.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">What is a CRE?</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <p class="lead text-center mb-4">
+          A COMPUTE Regional Event brings together CS educators and researchers to strengthen the community, share experiences, and tackle regional challenges in computing education.
+        </p>
+        <div class="row g-4">
+          <div class="col-md-4 text-center">
+            <h3 class="h6">Workshops</h3>
+            <p class="small text-muted">Hands-on sessions for educators and researchers to develop their ideas.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <h3 class="h6">Discussions</h3>
+            <p class="small text-muted">Group discussions on CS education challenges and solutions.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <h3 class="h6">Networking</h3>
+            <p class="small text-muted">Connect with faculty and researchers from across the region.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Resources</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <h3 class="h5">Host a CRE</h3>
+            <p class="small text-muted">Planning guide and timeline for hosting your own regional event.</p>
+            <a href="https://acm-cre.github.io/docs/organising/planning/" class="btn btn-outline-primary btn-sm">Planning Guide</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <h3 class="h5">Website Template</h3>
+            <p class="small text-muted">Ready-to-use Jekyll template for your event website.</p>
+            <a href="https://github.com/ACM-CRE/website-template" class="btn btn-outline-primary btn-sm">Get Template</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <h3 class="h5">Documentation</h3>
+            <p class="small text-muted">Complete setup and customisation guides.</p>
+            <a href="https://acm-cre.github.io/docs/" class="btn btn-outline-primary btn-sm">View Docs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">About</h2>
+    <p class="mb-4">
+      COMPUTE Regional Events are organised in collaboration with
+      <a href="https://isigcse.acm.org" target="_blank" rel="noopener">ACM iSIGCSE</a> and
+      <a href="https://india.acm.org" target="_blank" rel="noopener">ACM India Council</a>.
+    </p>
+    <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
+      <a href="https://isigcse.acm.org" target="_blank" rel="noopener">
+        <img src="{{ '/assets/images/organisers/acm-isigcse-768x256.jpg' | relative_url }}" alt="ACM iSIGCSE" height="50">
+      </a>
+      <a href="https://india.acm.org" target="_blank" rel="noopener">
+        <img src="{{ '/assets/images/organisers/acm-india-council.svg' | relative_url }}" alt="ACM India Council" height="50">
+      </a>
+      <a href="https://sigcse.org" target="_blank" rel="noopener">
+        <img src="{{ '/assets/images/organisers/acm-sigcse.png' | relative_url }}" alt="ACM SIGCSE" height="50">
+      </a>
+    </div>
+  </div>
+</section>

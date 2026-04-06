@@ -1,60 +1,26 @@
 {% comment %}
-Site Footer Component
-Renders organiser logos, contact info, copyright, and attribution.
-
-Data:
-  site.data.config.site.social.email (for contact link)
-
-Strings: site.data.strings[lang]
-  - home.date_display: event date shown in footer
-  - footer.contact: contact link text
-  - footer.copyright: copyright text
-  - footer.built_by: attribution text
-
-Assets:
-  /assets/images/organisers/*.svg|jpg|png (organiser logos)
-  /assets/images/social/github.svg (GitHub icon)
+Site Footer for ACM CRE Hub
+Simple footer with links.
 {% endcomment %}
-
-{% assign lang = page.lang | default: site.lang | default: "en" %}
-{% assign strings = site.data.strings[lang] %}
 
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-organisers">
-      <div class="footer-organisers-logos">
-        <a href="{{ site.data.config.organisers.host.url }}" target="_blank" rel="noopener" title="{{ site.data.config.organisers.host.name }}">
-          <img src="{{ site.data.config.organisers.host.logo | relative_url }}" alt="{{ site.data.config.organisers.host.name }}" loading="lazy">
-        </a>
-        <a href="https://isigcse.acm.org" target="_blank" rel="noopener" title="ACM iSIGCSE">
-          <img src="{{ '/assets/images/organisers/acm-isigcse-768x256.jpg' | relative_url }}" alt="ACM iSIGCSE" loading="lazy">
-        </a>
-        <a href="https://india.acm.org" target="_blank" rel="noopener" title="ACM India Council">
-          <img src="{{ '/assets/images/organisers/acm-india-council.svg' | relative_url }}" alt="ACM India Council" loading="lazy">
-        </a>
-        <a href="https://sigcse.org" target="_blank" rel="noopener" title="ACM SIGCSE">
-          <img src="{{ '/assets/images/organisers/acm-sigcse.png' | relative_url }}" alt="ACM SIGCSE" loading="lazy">
-        </a>
-      </div>
-    </div>
-
     <div class="footer-main">
       <div class="footer-brand">
         <span class="footer-logo">ACM CRE</span>
         <span class="footer-divider">·</span>
-        <span class="footer-date">{{ strings.home.date_display }}</span>
+        <span class="footer-tagline">COMPUTE Regional Events</span>
       </div>
-
-      <a href="mailto:{{ site.data.config.site.social.email }}" class="footer-contact">{{ strings.footer.contact }}</a>
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copyright">{{ strings.footer.copyright }}</p>
+      <p class="footer-copyright">© {{ site.time | date: "%Y" }} ACM COMPUTE Regional Events</p>
       <div class="footer-attribution">
-        <a href="https://deeprajpandey.com/" target="_blank" rel="noopener">{{ strings.footer.built_by }}</a>
-        <a href="https://github.com/acm-cre/acm-cre.github.io" target="_blank" rel="noopener" title="View source on GitHub" class="footer-github-link">
-          <img src="{{ '/assets/images/social/github.svg' | relative_url }}" alt="GitHub" class="footer-github-icon">
-        </a>
+        <a href="https://deeprajpandey.com/" target="_blank" rel="noopener">built by deepraj pandey</a>
+        <span class="mx-2">·</span>
+        <a href="https://github.com/ACM-CRE" target="_blank" rel="noopener">GitHub</a>
+        <span class="mx-2">·</span>
+        <a href="https://acm-cre.github.io/docs/" target="_blank" rel="noopener">Docs</a>
       </div>
     </div>
   </div>
