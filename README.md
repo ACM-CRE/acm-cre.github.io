@@ -1,90 +1,62 @@
-# ACM COMPUTE Regional Event Template
+# ACM COMPUTE Regional Events
 
-A Jekyll template for ACM COMPUTE Regional Events. Use this template to create your own regional event website.
+The main website for ACM COMPUTE Regional Events - a hub for all CRE information, event listings, and archives.
 
-<p>
-  <img src="assets/images/home_en.png" alt="Homepage (English)" width="49%">
-  <img src="assets/images/home_hi.png" alt="Homepage (Hindi)" width="49%">
-</p>
+**Live site:** [acm-cre.github.io](https://acm-cre.github.io)
 
-## Features
+## Related Repositories
 
-- **Jekyll + GitHub Pages** compatible (no build step required)
-- **Bootstrap 5** with full Sass customisation
-- **WCAG 2.1 AA** accessible
-- **Bilingual support** (English + Hindi) with proper i18n architecture
-- **Data-driven** — configure everything via YAML files
-- **Mobile-first** responsive design
+| Repository | Purpose |
+|------------|---------|
+| [website-template](https://github.com/ACM-CRE/website-template) | Template for creating event websites |
+| [acm-cre-docs](https://github.com/ACM-CRE/acm-cre-docs) | Documentation site |
 
-## Documentation
-
-For complete setup instructions, customisation guides, and deployment information, visit:
-
-**[https://acm-cre.github.io/docs/](https://acm-cre.github.io/docs/)**
-
-## Quick Start
-
-1. Click "Use this template" to create your own repository
-2. Configure your event in `_data/config/` and `_data/content/`
-3. Replace placeholder images in `assets/images/organisers/`
-4. Deploy to GitHub Pages
-
-See the [documentation](https://acm-cre.github.io/docs/) for detailed instructions.
-
-## Project Structure
+## Structure
 
 ```
-├── _config.yml           # Jekyll configuration
+├── index.html          # Main landing page
+├── events/             # Archived event sites (static HTML)
+│   └── ashoka-2026/    # Ashoka University CRE archive
 ├── _data/
-│   ├── config/           # Site and event configuration
-│   │   ├── site.yml      # Event name, date, location, social links
-│   │   ├── navigation.yml
-│   │   └── organisers.yml
-│   ├── content/          # Event content
-│   │   ├── schedule.yml
-│   │   ├── sponsors.yml
-│   │   └── speakers/
-│   └── strings/          # UI translations
-│       ├── en.yml
-│       └── hi.yml
-├── _includes/
-│   ├── layout/           # Header, footer, head
-│   ├── components/       # Schedule, speakers, sponsors
-│   └── utilities/        # Language switcher
-├── _layouts/
-│   ├── default.html      # Base layout
-│   ├── home.html         # Home page layout
-│   └── flyer.html        # Print-optimized flyer layout
-├── _pages/               # English pages
-├── _sass/
-│   ├── _variables.scss   # Theme customisation
-│   ├── _bootstrap.scss   # Bootstrap imports
-│   └── _custom.scss      # Custom styles
-├── assets/
-│   ├── css/
-│   ├── images/
-│   │   ├── organisers/   # Host and partner logos
-│   │   ├── sponsors/     # Sponsor logos
-│   │   ├── speakers/     # Speaker photos
-│   │   └── flyers/       # Flyer preview images
-│   └── downloads/        # Downloadable PDFs (flyers)
-├── hi/                   # Hindi pages
-├── index.md              # English home page
-├── 404.html              # Error page
-└── robots.txt            # Search engine config
+│   └── events.yml      # Event listings (upcoming + past)
+└── assets/             # Images, CSS
+```
+
+## Adding Events
+
+Edit `_data/events.yml`:
+
+```yaml
+upcoming:
+  - name: "University Name CRE"
+    date: "2026-04-15"
+    date_display: "April 15, 2026"
+    location: "City, India"
+    url: "https://university-cre.github.io"
+
+past:
+  - name: "Previous CRE"
+    date: "2026-03-21"
+    date_display: "March 21, 2026"
+    location: "City, India"
+    archive_path: "/events/previous-2026/"
+```
+
+## Archiving Events
+
+To archive a past event:
+
+1. Build the event site: `bundle exec jekyll build`
+2. Copy `_site/*` to `events/[event-name]/`
+3. Add entry to `_data/events.yml` under `past`
+
+## Local Development
+
+```bash
+bundle install
+bundle exec jekyll serve
 ```
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details.
-
-## Credits
-
-Built with:
-- [Jekyll](https://jekyllrb.com/)
-- [Bootstrap 5](https://getbootstrap.com/)
-- [GitHub Pages](https://pages.github.com/)
-
----
-
-Made with care for the ACM COMPUTE community
+MIT License
