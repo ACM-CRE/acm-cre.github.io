@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://acm-cre.github.io/events/ashoka-2026/sitemap.xml
