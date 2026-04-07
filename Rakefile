@@ -46,6 +46,9 @@ task :deploy do
   end
 
   puts "==> Preparing deployment..."
+  # Remove any leftover throwaway repo from a previous failed deploy.
+  # Otherwise `git checkout -b gh-pages` below fails with "already exists".
+  FileUtils.rm_rf("_site/.git")
   Dir.chdir("_site") do
     # Add .nojekyll to prevent GitHub from processing with Jekyll
     FileUtils.touch(".nojekyll")
