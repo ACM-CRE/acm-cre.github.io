@@ -1,0 +1,14 @@
+<svg width="300" height="90" viewBox="0 0 300 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dashed border rectangle -->
+  <rect x="4" y="4" width="292" height="82" rx="6" ry="6" fill="#f8f9fa" stroke="#6c757d" stroke-width="2" stroke-dasharray="8 4"/>
+
+  <!-- Main text -->
+  <text x="150" y="42" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#495057" text-anchor="middle">
+    Sponsor Logo
+  </text>
+
+  <!-- Dimensions text -->
+  <text x="150" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#868e96" text-anchor="middle">
+    ~300 × 90
+  </text>
+</svg>

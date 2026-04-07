@@ -1,0 +1,14 @@
+<svg width="329" height="124" viewBox="0 0 329 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dashed border rectangle -->
+  <rect x="4" y="4" width="321" height="116" rx="8" ry="8" fill="#f8f9fa" stroke="#6c757d" stroke-width="2" stroke-dasharray="8 4"/>
+
+  <!-- Main text -->
+  <text x="164.5" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="600" fill="#495057" text-anchor="middle">
+    Your Logo
+  </text>
+
+  <!-- Dimensions text -->
+  <text x="164.5" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#868e96" text-anchor="middle">
+    329 × 124
+  </text>
+</svg>
